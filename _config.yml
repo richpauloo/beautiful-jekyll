@@ -32,7 +32,7 @@ navbar-links:
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
-avatar: "/img/avatar-icon.png"
+avatar: "/img/profile_ice_100.jpg"
 
 # If you want to have an image logo in the top-left corner instead of the title text,
 # then specify the following parameter
@@ -55,16 +55,16 @@ avatar: "/img/avatar-icon.png"
 # Change all these values or delete the ones you don't want.
 # Important: you must keep the "name" parameter, everything else you can remove
 author:
-  name: Some Person
-  email: "youremail@domain.com"
+  name: Rich Pauloo
+  email: "richpauloo@gmail.com"
   facebook: yourname  # eg. daattali
-  github: yourname    # eg. daattali
+  github: richpauloo    # eg. daattali
   twitter: yourname   # eg. daattali
   reddit: yourname    # eg. daattali
   google-plus: +yourname   # eg. +DeanAttali or 109424658772469020925
-  linkedin: yourname  # eg. daattali
+  linkedin: richpauloo  # eg. daattali
   xing: yourname      # eg. daattali
-  stackoverflow: yourlink  # eg. "3943160/daattali"
+  stackoverflow: "8367943/rich-pauloo"  # eg. "3943160/daattali"
   snapchat: yourname  # eg. daattali
   instagram: yourname # eg. daattali
   youtube: yourlink   # eg. user/daattali or channel/daattali
@@ -77,15 +77,15 @@ author:
 # Select which links to show in the footer
 footer-links-active:
   rss: false
-  facebook: true
+  facebook: false
   email: true
-  twitter: true
+  twitter: false
   google-plus: false
   github: true
   reddit: false
-  linkedin: false
+  linkedin: true
   xing: false
-  stackoverflow: false
+  stackoverflow: true
   snapchat: false
   instagram: false
   youtube: false
