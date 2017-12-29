@@ -1,3 +1,12 @@
+---
+layout: post
+title: Test Rmd to markdown
+subtitle: I had to manually insert the yaml header
+tags: [random, test]
+gh-repo: richpauloo/richpauloo.github.io
+gh-badge: [star, fork, follow]
+---
+
 This is a Test Post
 ===================
 
