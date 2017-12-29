@@ -1,0 +1,29 @@
+---
+title: "2017-12-28-test-post.Rmd"
+author: "Rich Pauloo"
+date: "12/28/2017"
+output: html_document
+---
+
+# This is a Test Post
+
+**Let's include bold text** and _italics_
+
+> maybe a block quote  
+
+Just to see how things work and if .Rmd works
+
+what about some code?
+
+```{r}
+library(ggplot2)
+library(dplyr)
+iris$Sepal.Length %>% hist()
+
+iris %>% distinct(Sepal.Length) %>% 
+  merge(iris, by = "Sepal.Length") %>% 
+  ggplot() +
+  geom_violin(mapping = aes(x = Species, y = Sepal.Length))
+
+```
+
