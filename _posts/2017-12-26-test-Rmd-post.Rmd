@@ -2,7 +2,7 @@
 title: "2017-12-28-test-post.Rmd"
 author: "Rich Pauloo"
 date: "12/28/2017"
-output: html_document
+output: md_document
 ---
 
 # This is a Test Post
