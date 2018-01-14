@@ -4,13 +4,5 @@ title: About me
 subtitle: Why you'd want to go on a date with me
 ---
 
-My name is Inigo Montoya. I have the following qualities:
+I live in Davis, California, where I'm a PhD candidate studying physical hydrology at the University of California Davis with my supervisor, Graham Fogg. I use a variety of water quantity and quality data to develop hydrodynamic flow and contaminant transport models, and statewide hydroeconomic optimization models. My research addresses how climate change and water management affects water quntity and quality in the state of California. I'm intrigued by the power of data science to reveal hidden relationships and tell visual stories, whether through a compelling graph or an interactive application. My undergraduate degrees are in Biology and Conflict Resolution. I'm curious and thrive on growth. I love to program, explore in the outdoors, learn new things, climb, and cook.
 
-- I rock a great mustache
-- I'm extremely loyal to my family
-
-What else do you need?
-
-### my history
-
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](http://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
