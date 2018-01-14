@@ -29,7 +29,7 @@ navbar-links:
     - Groundwater Quality Mapper: "https://richpauloo.shinyapps.io/tds_leaflet/"
     - Word Cloud Generator: "https://richpauloo.shinyapps.io/word_cloud_app/"
     - Conference Data Explorer: "https://richpauloo.shinyapps.io/abstr/"
-  Academic CV: <embed src="https://github.com/richpauloo/richpauloo.github.io/blob/master/rap-rmarkdown-cv.pdf" width="500" height="375" type='application/pdf'>
+  Academic CV: <embed src="richpauloo.github.io/rap-rmarkdown-cv.pdf" width="500" height="375" type='application/pdf'>
 
 
 # Image to show in the navigation bar - image must be a square (width = height)
