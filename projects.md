@@ -66,7 +66,7 @@ Upload a .txt file and turn it into a wordcloud. This app uses natural language 
 
 ***
 ### Interactive Conference Application 
-Explore 2017 American Geophysical Union Conference Data in this interactive swiping application.
+Swipe through 2017 American Geophysical Union Conference Data in this interactive application.
 
 [![abstr](img/abstr.png)](https://richpauloo.shinyapps.io/abstr/)
 

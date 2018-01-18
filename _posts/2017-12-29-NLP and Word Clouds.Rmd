@@ -1,0 +1,126 @@
+---
+categories: blog
+comments: true
+use-site-title: false
+date: "2017-12-29"
+layout: post
+tags: [R, NLP, research]
+output: 
+  html_document:
+    code_folding: hide
+---
+
+I recently came across the `tidytext` package in R, with the accompanying book: [Text Miniing in R](https://www.tidytextmining.com/) by David Robinson and Julia Silge. I found it very cogent and practical for basic text mining and NLP problems.  
+
+The book builds on tidy data principles, so a knowledge of `dplyr` and `ggplot2` really helped with picking up the book and jumping into some NLP.  
+
+There are a pleathora of out-of-the-box tools that help with basic natural language processing (NLP) tasks, such as:
+* functions for tokenizing documents
+* built in dataframes of common stop-words (e.g. - a, an, and, the, but)
+* functions for calculating tf, idf, and tf-idf
+
+After playing around a bit with examples, I thoght it would be interesting to see what my 38 page research prospectus which I spent months slaving over boiled down to. Here’s how I did it.  
+
+***
+
+## Bring in Data
+I first saved my *.docx* file as a *.txt* in *UTF-8* encoding because, in short, it's easier for R to read. The result is a very messy table, which I won't print here.
+```{r}
+path <- '/Users/richpauloo/Desktop/Data Science/Natural Languge Processing/WordClouds/Research Prospectus/rp.txt' # the local file path to my research prospectus
+
+dat <- read.table(path, header = FALSE, fill = TRUE) # fill = TRUE b/c rows are of unequal length
+```
+
+## Load libraries
+```{r, message = FALSE, warning = FALSE}
+library(dplyr) # for data wrangling
+library(tidytext) # for NLP
+library(stringr) # to deal with strings
+library(wordcloud) # to render wordclouds
+library(knitr) # for tables
+library(DT) # for dynamic tables
+library(tidyr)
+```
+
+## 1. Tidy
+Since the package we're using adheres to tidy data principles, step 1 is to get this messy table into a one column data frame, with one word in each row.
+```{r, message = FALSE, warning = FALSE}
+# reshape the .txt data frame into one column
+tidy_dat <- tidyr::gather(dat, key, word) %>% select(word)
+
+tidy_dat$word %>% length() # there are 10,480 tokens in my document
+unique(tidy_dat$word) %>% length() # and of these, 2,866 are unique 
+```
+
+## 2. Tokenize
+The next step is to *tokenize*, or boil the dataframe down down to only unique observations, and count the number of each observation. To perform this, we use the out-of-the-box function `unnest_tokens()`, which takes 3 arguments:
+* a tidy data frame
+* name of the output column to be created
+* name of the input column to be split into tokens
+Then we use the `count()` function from `dplyr` to group by words and tally observations. Becauase `count()` performs a `group_by()` on the *word* column, we can't forget to `ungroup()`.
+```{r}
+# tokenize
+tokens <- tidy_dat %>% 
+  unnest_tokens(word, word) %>% 
+  dplyr::count(word, sort = TRUE) %>% 
+  ungroup()
+```
+
+Just because a token is common doesn't mean it's important. For instance, take a look at the most 10 common tokens in my research prospectus.
+```{r}
+tokens %>% head(10)
+```
+
+## 3. Remove Stop Words, Numbers, Etc.
+Luckily, `tidytext` has some built-in libraries of stop words. We'll use an `anti_join()` to get rid of stop words anc clean our tokens. 
+```{r}
+# remove stop words
+data("stop_words")
+tokens_clean <- tokens %>%
+  anti_join(stop_words)
+```
+
+While we're at it, we'll use a regex to clean all numbers.
+```{r}
+# remove numbers
+nums <- tokens_clean %>% filter(str_detect(word, "^[0-9]")) %>% select(word) %>% unique()
+
+tokens_clean <- tokens_clean %>% 
+  anti_join(nums, by = "word")
+```
+
+I also did a quick pass over `tokens_clean` to look for other meaningless tokens that escaped the stop-word dictionary and the numbers. It's not surprising that the tokens that made it by were:
+* al - from citations (e.g. - et. al)
+* figure - looks like I have a lot of figure captions and references in my prospectus
+* i.e. - gotta love those parentheticals
+* etc...
+I'll store these unique stop words in a vector and perform another `anti_join`, et voila. A tidy, clean list of tokens and counts.
+```{r}
+# remove unique stop words that snuck in there
+uni_sw <- data.frame(word = c("al","figure","i.e", "l3"))
+
+tokens_clean <- tokens_clean %>% 
+  anti_join(uni_sw, by = "word")
+```
+
+## 4. Make a Word Cloud of the top 50 words
+And just like that, an easy word cloud. In fact, this code was so simple and fun that I wrapped it into a [Shiny App](https://richpauloo.shinyapps.io/word_cloud_app).
+```{r}
+# define a nice color palette
+pal <- brewer.pal(8,"Dark2")
+
+# plot the 50 most common words
+tokens_clean %>% 
+  with(wordcloud(word, n, random.order = FALSE, max.words = 50, colors=pal))
+```
+
+## Data Table
+Just for fun, let's add a searchable data table with the `DT` package.
+```{r}
+tokens_clean %>%
+  DT::datatable()
+
+```
+
+In another post, I'll dig deeper into NLP, and compare documents to explore how to quantify relationships between documents with *idf*, *tf-idf*, and *cosine similarity*.
+
