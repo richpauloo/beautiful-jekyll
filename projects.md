@@ -46,7 +46,7 @@ Can we predict groundwater quality (i.e. - TDS) from feature datasets (e.g. - la
 
 Effectively modeling groundwater quality requires an understanding of contaminant transport in heterogeneous proous media. I am especially drawn to visualizing particle paths as a way to understand transport behavior.
 
-[![contaminant transport](img/con_trans)](http://rpubs.com/richpauloo/rand_walk)
+[![contaminant transport](img/con_trans.png)](http://rpubs.com/richpauloo/rand_walk)
 
 ***
 ### Groundwater Recharge Operating Rules
