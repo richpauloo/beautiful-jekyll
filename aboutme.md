@@ -12,5 +12,5 @@ I live in Davis, California, where I'm a PhD candidate studying physical hydrolo
 
 
 <p align="center">
-  <img width="1080" height="1616" src="/img/cath.jpg">
+  <img width="810" height="1212" src="/img/cath.jpg">
 </p>
