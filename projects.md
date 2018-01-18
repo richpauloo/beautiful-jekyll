@@ -53,7 +53,7 @@ Effectively modeling groundwater quality requires an understanding of contaminan
 
 One way to improve groundwater quality is to recharge contaminated aquifers with relatively clean water. Actually getting that water into the ground is both a hydrogeologic and hydroeconomic process. It has to pay off. I explore groundwater recharge rules and scenarios with the [CALifornia VALue Integrated Network Model (CALVIN)](https://calvin.ucdavis.edu/node).
 
-![calvin](img/cal)
+![calvin](img/cal.png)
 
 ***
 ***
