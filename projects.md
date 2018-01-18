@@ -12,7 +12,7 @@ The motivation of my research is to ensure that future generations have access t
 
 Most of my methods involve the mathematical modeling of hydrologic systems, primarly groundwater aquifers. I employ data science, programming, mapping, geostatistics, numerical modeling, and machine learning to explore how to physically characterize such systems, make predictions, and manage for best outcomes. Where conventional methods fail to address emergent problems, I develop new ones.
 
-
+![Alt text](https://github.com/richpauloo/richpauloo.github.io/blob/master/gw_word_cloud.png)
 
 
 
