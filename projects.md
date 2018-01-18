@@ -12,35 +12,31 @@ The motivation of my research is to ensure that future generations have access t
 
 My methods involve the mathematical modeling of hydrologic systems, primarly groundwater aquifers. I employ data science, programming, mapping, geostatistics, numerical flow and contaminant transport modeling, and machine learning to explore how to model groundwater systems, make predictions, and manage for best outcomes. Where conventional methods fail to address emergent problems, I develop new ones.
 
-## Funding
-
 I am grateful to my funding sources, without which the following projects would not be possible:
 * [National Science Foundation DGE #1069333, the Climate Change, Water, and Society IGERT, to UC Davis.](http://ccwas.ucdavis.edu/)
 * [Department of Energy - U.S./China Clean Energy Research Center for Water Energy Technologies (CERC-WET)](https://cerc-wet.berkeley.edu/)
 
+***
 
 ### Groundwater Quality Mapping in California
-***
 Total Dissolved Solids (TDS) are a measure of groundwater quality. However, these data are collected by various federal, state, local, nongovernmental, and private entities, often with different sampling protocol. This interactive map represents all publically available TDS data for the Tulare Basin in California's southern Central Valley.
  
 [![groundwater quality shiny app](/img/tds_app.png)](https://richpauloo.shinyapps.io/tds_leaflet/)
 
-### Closed Basin Hydrogeology: a 1D Monte Carlo Mixing Model
 ***
+### Closed Basin Hydrogeology: a 1D Monte Carlo Mixing Model
 In many parts of the world including the Southern Central Valley of California, groundwater quality is declining. TDS and other contaminants accumulate, but why? Groundwater pumping can disconnect ground and surface water, leading to the formation of closed hydrologic basins that accumualte contaminants. This hypothesis is supported by a 1D Monte Carlo mixing model of California's Tulare Basin.
 
 [![groundwater salinization conceptual model](img/gw_sal.png)](https://github.com/richpauloo/Monte-Carlo-Mixing-Model)
 
-### Upscaling the Advection Dispersion Equation
 ***
-
+### Upscaling the Advection Dispersion Equation
 Efficiently modeling regional groundwater quality would be much aided by the development of simplified upscaled models that preserve the main contaminant transport physics. 
 
-[![Pauloo AGU 2017 poster](img/agu_2017.png)](richpauloo.github.io/img/agu_pauloo_2017.pdf)
+[![Pauloo AGU 2017 poster](img/agu_2017.png)](https://github.com/richpauloo/richpauloo.github.io/blob/master/img/agu_pauloo_2017_small.pdf)
 
-
-### Machine Learning & Groundwater Quality
 ***
+### Machine Learning & Groundwater Quality
 Can we predict groundwater quality (i.e. - TDS) from feature datasets (e.g. - land cover, land use, local geology, etc.)? What can machine learning approaches to groundwater quality reveal to us about the controls on groundwater quality? This work is ongoing.
 
 ![groundwater quality with depth](img/gw_qual.png)
