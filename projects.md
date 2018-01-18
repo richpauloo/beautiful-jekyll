@@ -4,7 +4,7 @@ title: Projects
 subtitle: check out some of my academic and personal projects
 ---
 
-# Academic:
+# ACADEMIC PROJECTS:
 
 Global groundwater reserves are the largest store of freshwater resources not locked in frozen ice caps, glaciers, and continental ice sheets.[^fn1] Around the world, groundwater storage is in critial decline [^fn2] [^fn3], and groundwater quality faces equal if not more severe threats [^fn4] [^fn5] [^fn6]. 
 
@@ -55,10 +55,20 @@ One way to improve groundwater quality is to recharge contaminated aquifers with
 
 ![calvin](img/cal.png)
 
-***
-***
-# Personal Projects:
 
+***
+# PERSONAL PROJECTS:
+
+### Word Cloud App
+Upload a .txt file and turn it into a wordcloud. This app uses natural language processing libraries in R to clean, tokenize, and render a word cloud.
+
+[![word cloud app](img/wc_app.png)](https://richpauloo.shinyapps.io/word_cloud_app/)
+
+***
+### Interactive Conference Application 
+Explore 2017 American Geophysical Union Conference Data in this interactive swiping application.
+
+[![abstr](img/abstr.png)](https://richpauloo.shinyapps.io/abstr/)
 
 
 ***
