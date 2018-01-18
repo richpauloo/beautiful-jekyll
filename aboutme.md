@@ -13,4 +13,5 @@ I live in Davis, California, where I'm a PhD candidate studying physical hydrolo
 
 <p align="center">
   <img width="810" height="1212" src="/img/cath.jpg">
-</p>
+</p>  
+A smoky day on Eichorn's Pinnacle, Cathedeal Peak in Yosemite, CA.
