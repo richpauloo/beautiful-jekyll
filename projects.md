@@ -6,24 +6,28 @@ subtitle: check out some of my academic and personal projects
 
 # Academic:
 
-Global groundwater reserves are the largest store of freshwater resources that are not locked in frozen ice caps, glaciers, and continental ice sheets.[^fn1] Around the world, groundwater storage is in critial decline [^fn2] [^fn3], and groundwater quality faces equal if not more severe threats [^fn4] [^fn5] [^fn6]. 
+Global groundwater reserves are the largest store of freshwater resources not locked in frozen ice caps, glaciers, and continental ice sheets.[^fn1] Around the world, groundwater storage is in critial decline [^fn2] [^fn3], and groundwater quality faces equal if not more severe threats [^fn4] [^fn5] [^fn6]. 
 
-The motivation of my research is to ensure that future generations have access to clean and abundant groundwater resources. I'm therefore interested in the sustainability of groundwater quantity and quality, and quantitative approaches to measuring these parameters. 
+The motivation of my research is to ensure that future generations have access to clean and abundant groundwater resources. 
 
-Most of my methods involve the mathematical modeling of hydrologic systems, primarly groundwater aquifers. I employ data science, programming, mapping, geostatistics, numerical modeling, and machine learning to explore how to physically characterize such systems, make predictions, and manage for best outcomes. Where conventional methods fail to address emergent problems, I develop new ones.
+My methods involve the mathematical modeling of hydrologic systems, primarly groundwater aquifers. I employ data science, programming, mapping, geostatistics, numerical modeling, and machine learning to explore how to model such systems, make predictions, and manage for best outcomes. Where conventional methods fail to address emergent problems, I develop new ones.
 
 <a href="https://richpauloo.shinyapps.io/word_cloud_app/">
   <img src="https://github.com/richpauloo/richpauloo.github.io/blob/master/img/wc_app.png" height="300">
 </a>
 
+### Interactive Groundwater Quality Mapping
+***
+Brief description of the work.
+ 
+[![alt text]("https://github.com/richpauloo/richpauloo.github.io/blob/master/img/tds_app.png")](https://richpauloo.shinyapps.io/tds_leaflet/)
 
-<a href="https://richpauloo.shinyapps.io/tds_leaflet/">
-  <img src="https://github.com/richpauloo/richpauloo.github.io/blob/master/img/tds_app.png" height="300">
-</a>
+### Project 2
+***
 
+Another description
 
-
-
+[![alt text]("https://github.com/richpauloo/richpauloo.github.io/blob/master/img/tds_app.png")](https://richpauloo.shinyapps.io/tds_leaflet/)
 
 [^fn1]: Gleick, P. H., 1996: Water resources. In Encyclopedia of Climate and Weather, ed. by S. H. Schneider, Oxford University Press, New York, vol. 2, pp.817-823.
 
