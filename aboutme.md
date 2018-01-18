@@ -12,3 +12,7 @@ I live in Davis, California, where I'm a PhD candidate studying physical hydrolo
 <p align="center">
   <img width="460" height="300" src="https://github.com/richpauloo/richpauloo.github.io/blob/master/img/cath.jpg">
 </p>
+
+<p align="center">
+  <img width="460" height="300" src="http://www.fillmurray.com/460/300">
+</p>
