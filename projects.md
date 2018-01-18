@@ -37,25 +37,31 @@ Efficiently modeling regional groundwater quality would be much aided by the dev
 
 ***
 ### Machine Learning & Groundwater Quality
-Can we predict groundwater quality (i.e. - TDS) from feature datasets (e.g. - land cover, land use, local geology, etc.)? What can machine learning approaches to groundwater quality reveal to us about the controls on groundwater quality? This work is ongoing.
+Can we predict groundwater quality (i.e. - TDS) from feature datasets (e.g. - land cover, land use, local geology, etc.)? What can machine learning approaches to groundwater quality reveal to us about the controls on groundwater quality? Ongoing work.
 
 ![groundwater quality with depth](img/gw_qual.png)
 
+***
 ### Random Walk Particle Transport in Heterogeneous Media
 
 Effectively modeling groundwater quality requires an understanding of contaminant transport in heterogeneous proous media. I am especially drawn to visualizing particle paths as a way to understand transport behavior.
 
-[![contaminant transport](img/con_trans)](richpauloo.github.io/img/tort_1_to_2.html)
+[![contaminant transport](img/con_trans)](http://rpubs.com/richpauloo/rand_walk)
 
+***
 ### Groundwater Recharge Operating Rules
 
 One way to improve groundwater quality is to recharge contaminated aquifers with relatively clean water. Actually getting that water into the ground is both a hydrogeologic and hydroeconomic process. It has to pay off. I explore groundwater recharge rules and scenarios with the [CALifornia VALue Integrated Network Model (CALVIN)](https://calvin.ucdavis.edu/node).
 
+![calvin](img/cal)
+
+***
+***
+# Personal Projects:
 
 
 
-
-
+***
 #### References
 
 [^fn1]: Gleick, P. H., 1996: Water resources. In Encyclopedia of Climate and Weather, ed. by S. H. Schneider, Oxford University Press, New York, vol. 2, pp.817-823.
