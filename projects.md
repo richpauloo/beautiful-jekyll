@@ -18,7 +18,7 @@ My methods involve the mathematical modeling of hydrologic systems, primarly gro
 ***
 Brief description of the work.
  
-[![alt text](https://github.com/richpauloo/richpauloo.github.io/blob/master/img/tds_app.png)](https://richpauloo.shinyapps.io/tds_leaflet/)
+![alt text](https://github.com/richpauloo/richpauloo.github.io/blob/master/img/tds_app.png)
 
 ### Project 2
 ***
