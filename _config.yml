@@ -24,7 +24,7 @@ description: A virtual proof that Rich is awesome!
 # List of links in the navigation bar
 navbar-links:
   About: "aboutme"
-  Projects: 
+  Projects: "projects"
   Shiny Apps:
     - Groundwater Quality Mapper: "https://richpauloo.shinyapps.io/tds_leaflet/"
     - Word Cloud Generator: "https://richpauloo.shinyapps.io/word_cloud_app/"
