@@ -33,7 +33,7 @@ In many parts of the world including the Southern Central Valley of California, 
 ### Upscaling the Advection Dispersion Equation
 Efficiently modeling regional groundwater quality would be much aided by the development of simplified upscaled models that preserve the main contaminant transport physics. 
 
-<iframe allowFullScreen frameborder="0" height="564" mozallowfullscreen src="https://player.vimeo.com/video/252802213" webkitAllowFullScreen width="640"></iframe>  
+<iframe allowFullScreen frameborder="0" mozallowfullscreen src="https://player.vimeo.com/video/252802213" webkitAllowFullScreen></iframe>  
 
 [![Pauloo AGU 2017 poster](img/agu_2017.png)](https://github.com/richpauloo/richpauloo.github.io/blob/master/img/agu_pauloo_2017_small.pdf)  
 
