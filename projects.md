@@ -21,8 +21,8 @@ I am grateful to my funding sources, without which the following projects would 
 ### Groundwater Quality Mapping in California
 Total Dissolved Solids (TDS) are a measure of groundwater quality. However, these data are collected by various federal, state, local, nongovernmental, and private entities, often with different sampling protocol. This interactive map represents all publically available TDS data for the Tulare Basin in California's southern Central Valley.
  
-[![groundwater quality shiny app](/img/tds_app.png)](https://richpauloo.shinyapps.io/tds_leaflet/)
-
+[![groundwater quality shiny app](/img/tds_app.png)](https://richpauloo.shinyapps.io/tds_leaflet/)  
+*click on the picture to open the app*
 ***
 ### Closed Basin Hydrogeology: a 1D Monte Carlo Mixing Model
 In many parts of the world including the Southern Central Valley of California, groundwater quality is declining. TDS and other contaminants accumulate, but why? Groundwater pumping can disconnect ground and surface water, leading to the formation of closed hydrologic basins that accumualte contaminants. This hypothesis is supported by a 1D Monte Carlo mixing model of California's Tulare Basin.
@@ -48,7 +48,8 @@ Can we predict groundwater quality (i.e. - TDS) from feature datasets (e.g. - la
 
 Effectively modeling groundwater quality requires an understanding of contaminant transport in heterogeneous proous media. I am especially drawn to visualizing particle paths as a way to understand transport behavior.
 
-[![contaminant transport](img/con_trans.png)](http://rpubs.com/richpauloo/rand_walk)
+[![contaminant transport](img/con_trans.png)](http://rpubs.com/richpauloo/rand_walk)  
+*click on the picture to explore some results*
 
 ***
 ### Groundwater Recharge Operating Rules
@@ -64,13 +65,15 @@ One way to improve groundwater quality is to recharge contaminated aquifers with
 ### Word Cloud App
 Upload a .txt file and turn it into a wordcloud. This app uses natural language processing libraries in R to clean, tokenize, and render a word cloud.
 
-[![word cloud app](img/wc_app.png)](https://richpauloo.shinyapps.io/word_cloud_app/)
+[![word cloud app](img/wc_app.png)](https://richpauloo.shinyapps.io/word_cloud_app/)  
+*click on the picture to open the app*
 
 ***
 ### Interactive Conference Application 
 Swipe through 2017 American Geophysical Union Conference Data in this interactive application.
 
-[![abstr](img/abstr.png)](https://richpauloo.shinyapps.io/abstr/)
+[![abstr](img/abstr.png)](https://richpauloo.shinyapps.io/abstr/)  
+*click on the picture to open the app*
 
 
 ***
