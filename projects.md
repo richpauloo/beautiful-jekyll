@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Projects
-subtitle: 
+subtitle: here are a few of my academic and personal projects
 ---
 
 # ACADEMIC PROJECTS:
