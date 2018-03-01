@@ -2,6 +2,7 @@
 layout: page
 title: Hi, I'm Rich
 subtitle: in curiosity, experience, and determination
+show-avatar: false
 ---
 
 <p align="center">
