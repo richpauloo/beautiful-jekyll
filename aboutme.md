@@ -15,7 +15,7 @@ I currently live in Davis, California, where I'm a PhD candidate studying physic
 
 
 <p align="center">
-  <img width="810" height="1212" src="/img/cath.jpg">
+  <img width="640" height="957" src="/img/cath.jpg">
 </p>  
 A smoky day on Eichorn's Pinnacle, Cathedeal Peak in Yosemite, CA.
 
