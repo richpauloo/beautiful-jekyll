@@ -100,7 +100,8 @@ leaflet(width = "100%") %>% addTiles() %>%
   addMarkers(-117.244199, 32.808437, popup = oscars) %>%
   addMarkers(-76.999721, 38.886027, popup = capitol) %>%
   addMarkers(-158.006448, 21.488432, popup = hawaii) %>%
-  addProviderTiles(providers$Stamen.Watercolor)
+  addProviderTiles(providers$Stamen.Watercolor) %>% 
+  setView(-82,40, zoom=1)
 
 
 
