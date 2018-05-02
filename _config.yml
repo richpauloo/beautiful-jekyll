@@ -25,6 +25,7 @@ description: Rich Pauloo's personal page.
 navbar-links:
   About: "aboutme"
   Projects: "projects"
+  Data Analysis:
     - CA Well Completion Reports: "oswcr_1.html"
     - Drought Vulnerability: "flexdashboard_socio.html"
   Apps & Dashboards:
