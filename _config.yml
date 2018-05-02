@@ -25,8 +25,9 @@ description: Rich Pauloo's personal page.
 navbar-links:
   About: "aboutme"
   Projects: "projects"
-  Apps & Dashboards:
+    - CA Well Completion Reports: "oswcr_1.html"
     - Drought Vulnerability: "flexdashboard_socio.html"
+  Apps & Dashboards:
     - Groundwater Quality Mapper: "https://richpauloo.shinyapps.io/tds_leaflet/"
     - Word Cloud Generator: "https://richpauloo.shinyapps.io/word_cloud_app/"
     - Conference Data Explorer: "https://richpauloo.shinyapps.io/abstr/"
