@@ -24,11 +24,11 @@ description: Rich Pauloo's personal page.
 # List of links in the navigation bar
 navbar-links:
   About: "aboutme"
-  Projects: "projects"
-  Data Analysis:
+  Research: "research"
+  Data Science:
     - CA Well Completion Reports: "oswcr_1.html"
     - Drought Vulnerability: "flexdashboard_socio.html"
-  Apps & Dashboards:
+  Apps:
     - Groundwater Quality Mapper: "https://richpauloo.shinyapps.io/tds_leaflet/"
     - Word Cloud Generator: "https://richpauloo.shinyapps.io/word_cloud_app/"
     - Conference Data Explorer: "https://richpauloo.shinyapps.io/abstr/"
