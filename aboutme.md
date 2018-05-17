@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Hi, I'm Rich
-subtitle: in curiosity, experience, and determination
+title: About Me
+subtitle: Hi, my name's Rich
 show-avatar: false
 ---
 
