@@ -6,7 +6,7 @@ show-avatar: false
 ---
 
 <p align="center">
-  <img width="640" height="746" src="/img/riv.png">
+  <img width="640" height="746" src="/img/headshot_bw.png">
 </p>
 
 I grew up in Southern California, and moved to the Bay Area to study Biology and Conflict Resolution at UC Berkeley. I spent the next three years teaching environmental science to middle and high school students in Yosemite, the Marin Headlands, and Thailand for the nonprofit organization NatureBridge, and National Geographic Student Expeditions.  
