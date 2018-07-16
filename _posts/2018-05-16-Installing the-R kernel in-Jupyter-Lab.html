@@ -153,10 +153,10 @@ $(document).ready(function () {
 <hr />
 <p>Open another Anaconda Prompt as Adminstrator and change directories to wherever <code>R.exe</code> is on your computer with <code>cd file path</code>. On my computer it’s: <code>cd C:\Program Files\R\R-3.4.3\bin</code>, but it might be different for you.</p>
 <p>Then run R from within Anaconda Prompt in Admin mode with <code>R.exe</code>.</p>
-<p>You’ll notice that you’re in an R session. From here, run the following three commands. In order, they (1) install the devtools package which gets you the <code>install_github()</code> function, (2) install the IR Kernel from github, and (3) tell Jupyter where to find the IR Kernel.</p>
+<p>You’ll notice that you’re in an R session. From here, run the following three commands. In order, they (1) install the devtools package which gets you the <code>install_github()</code> function, (2) install the IR Kernel from github, and (3) tell Jupyter where to find the IR Kernel (the argument <code>user = FALSE</code> makes this a system-wide installation).</p>
 <p><code>install.packages(&quot;devtools&quot;)</code></p>
 <p><code>devtools::install_github(&quot;IRkernel/IRkernel&quot;)</code></p>
-<p><code>IRkernel::installspec()</code></p>
+<p><code>IRkernel::installspec(user = FALSE)</code></p>
 <hr />
 </div>
 <div id="open-jupyter-lab-and-enjoy-your-new-r-kernel" class="section level1">
