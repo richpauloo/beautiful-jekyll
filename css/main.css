@@ -676,7 +676,7 @@ table tr td :last-child {
 
 /* --- Code blocks --- */
 
-pre {
+pre.highlights {
     font-size: 90%;
     line-height: 1.2em;
     font-family: "Courier 10 Pitch", Courier, monospace; 
@@ -691,7 +691,6 @@ pre {
     clear: both;
     color: #555555;
     padding: 1em 1em;
-    margin: auto 40px auto 40px;
     background: #f4f4f4;
     border: solid 1px #e1e1e1
 } 
@@ -706,9 +705,6 @@ code {
     background: #f4f4f4;
 }
 
-.highlight > pre {
-  padding: 0;
-}
 
 
 /* --- Social media sharing section --- */
