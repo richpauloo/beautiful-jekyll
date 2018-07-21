@@ -706,25 +706,10 @@ code {
     background: #f4f4f4;
 }
 
-
-code table, code table td, code table th, code table tbody, code table tr,
-td.gutter pre {
-  padding: 0;
-  border: none;
-  background-color: #fff;
-}
 .highlight > pre {
   padding: 0;
 }
-td.code pre {
-  border-width: 0 0 0 2px;
-  border-style: solid;
-  border-color: #444;
-  border-radius: 0;
-}
-td.gutter {
-  padding-top: 3px;
-}
+
 
 /* --- Social media sharing section --- */
 
