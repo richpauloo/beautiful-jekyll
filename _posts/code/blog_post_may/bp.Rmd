@@ -56,19 +56,25 @@ h6 { /* Header 6 */
 
 I was recently pretty impressed with [Jupyter's](http://jupyter.org/) newest creation, the Jupyter Lab IDE. You can test drive an online demostration of Jupyter Lab with a Python and R kernel [here](https://mybinder.org/v2/gh/jupyterlab/jupyterlab-demo/18a9793b58ba86660b5ab964e1aeaf7324d667c8?urlpath=lab%2Ftree%2Fdemo%2FLorenz.ipynb).  
 
-I downloaded a version, and found that the R Kernel was missing! To get the R kernel up and running in Jupyter Lab was a bit more complicated than expected. This guide is meant to break things down step by step. There are certaintly other ways to do this, but this is a tried a true method. Sorry mac Users, I did this at work on my PC.   
+I downloaded a version, and found that the R Kernel was missing! To get the R kernel up and running in Jupyter Lab was a bit more complicated than expected. This guide is meant to break things down step by step.   
 
+I did this both at work (PC) and home (OSX).  
+
+
+
+
+# PC Instructions
 
 ***  
 
 
-# 1. Install Anaconda 
+## 1. Install Anaconda 
 
 Download [here](https://www.anaconda.com/download/). This gives you a few important things: Jupyter notebooks, and the Anaconda Prompt.  
 
 ***  
 
-# 2. Install the Jupyter client 
+## 2. Install the Jupyter client 
 
 Search for the Anaconda Prompt in your computer, **right click, and run As Adminstrator**.  
 
@@ -79,7 +85,7 @@ In the prompt type `conda install -c anaconda jupyter_client`.
 ***  
 
 
-# 3. Install the IR Kernel 
+## 3. Install the IR Kernel 
 
 I assume you have R on your computer. If not, I recommend downloading it [here](https://cloud.r-project.org/).  
 
@@ -105,11 +111,51 @@ In order, they (1) install the devtools package which gets you the `install_gith
 
 ***  
 
-# 4. Open Jupyter Lab and enjoy your new R kernel!  
+## 4. Open Jupyter Lab and enjoy your new R kernel!  
 
 Open Anaconda Prompt and type in `jupyter lab`. Jupyter Lab should launch and display both a python and R kernel.  
 
 ![](ir.png)  
+
+
+# OSX  Instructions
+
+
+***  
+
+
+I found installation on my Mac a lot easier. I just followed the steps [here](https://irkernel.github.io/installation/).  
+
+## 1. Install Anaconda
+
+Download the Mac version [here](https://www.anaconda.com/download/#macos) and run through the setup.  
+
+***  
+
+## 2. Open R and install the necessary packages
+
+Open up the R prompt and enter:  
+
+`install.packages(c('repr', 'IRdisplay', 'evaluate', 'crayon', 'pbdZMQ', 'devtools', 'uuid', 'digest'))`  
+
+`devtools::install_github('IRkernel/IRkernel')`  
+
+***  
+
+## 3. Configure IRkernel from within R
+
+It's important that these next commands are done from within the version of R that you want to link to Jupyter Lab.  
+
+I found my version of R in `richpauloo$ /Library/Frameworks/R.framework/Versions/3.4/Resources/bin/R`. Navigate to the version of R you're using, lanuch `R.exe`, and enter:  
+
+
+`IRkernel::installspec() # install for the current user`  
+
+
+`IRkernel::installspec(user = FALSE) # install system-wide`  
+
+Fire up Anaconda, launch a Jupyter Lab session, and you should see an R kernel waiting for you!  
+
 
 ***  
 
