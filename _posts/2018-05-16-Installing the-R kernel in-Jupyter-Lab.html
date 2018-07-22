@@ -68,6 +68,7 @@ h6 {
 }
 </style>
 
+<link href="data:text/css;charset=utf-8,%3Cstyle%20type%3D%22text%2Fcss%22%3E%20body%20%7B%20font%2Dsize%3A%2020px%3B%0Afont%2Dfamily%3A%20%22Lora%22%3B%20color%3A%20%23404040%3B%0A%7D%20blockquote%20%7B%0Acolor%3A%20%23808080%3B%0Afont%2Dstyle%3A%20italic%3B%0Afont%2Dsize%3A%2020px%3B%0Afont%2Dfamily%3A%20%22Lora%22%3B%20%7D%0Acode%2Er%7B%20font%2Dsize%3A%2015px%3B%20%7D%20pre%20%7B%20font%2Dsize%3A%2011px%20%7D%20h1%20%7B%20%0Afont%2Dsize%3A%2034px%3B%0Afont%2Dfamily%3A%20%27Open%20Sans%27%2C%20%27Helvetica%20Neue%27%2C%20Helvetica%2C%20Arial%2C%20sans%2Dserif%3B%0Afont%2Dweight%3A%20900%3B%0A%7D%0Ah2%20%7B%20%0Afont%2Dsize%3A%2032px%3B%0Afont%2Dfamily%3A%20%27Open%20Sans%27%2C%20%27Helvetica%20Neue%27%2C%20Helvetica%2C%20Arial%2C%20sans%2Dserif%3B%0Afont%2Dweight%3A%20900%3B%0A%7D%0Ah3%20%7B%20%0Afont%2Dsize%3A%2030px%3B%0Afont%2Dfamily%3A%20%27Open%20Sans%27%2C%20%27Helvetica%20Neue%27%2C%20Helvetica%2C%20Arial%2C%20sans%2Dserif%3B%0Afont%2Dweight%3A%20900%3B%0A%7D%0Ah4%20%7B%20%0Afont%2Dsize%3A%2028px%3B%0Afont%2Dfamily%3A%20%27Open%20Sans%27%2C%20%27Helvetica%20Neue%27%2C%20Helvetica%2C%20Arial%2C%20sans%2Dserif%3B%0Afont%2Dweight%3A%20900%3B%0A%7D%0Ah5%20%7B%20%0Afont%2Dsize%3A%2026px%3B%0Afont%2Dfamily%3A%20%27Open%20Sans%27%2C%20%27Helvetica%20Neue%27%2C%20Helvetica%2C%20Arial%2C%20sans%2Dserif%3B%0Afont%2Dweight%3A%20900%3B%0A%7D%0Ah6%20%7B%20%0Afont%2Dsize%3A%2022px%3B%0Afont%2Dfamily%3A%20%27Open%20Sans%27%2C%20%27Helvetica%20Neue%27%2C%20Helvetica%2C%20Arial%2C%20sans%2Dserif%3B%0Afont%2Dweight%3A%20900%3B%0A%7D%0A%3C%2Fstyle%3E" rel="stylesheet" type="text/css" />
 
 </head>
 
@@ -89,6 +90,9 @@ img {
 }
 .tabbed-pane {
   padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
 }
 button.code-folding-btn:focus {
   outline: none;
@@ -121,12 +125,10 @@ $(document).ready(function () {
 </div>
 
 
-<div id="minute-read" class="section level3">
-<h3>5 minute read</h3>
+<p><strong>5 minute read</strong></p>
 <p>I was recently pretty impressed with <a href="http://jupyter.org/">Jupyter’s</a> newest creation, the Jupyter Lab IDE. You can test drive an online demostration of Jupyter Lab with a Python and R kernel <a href="https://mybinder.org/v2/gh/jupyterlab/jupyterlab-demo/18a9793b58ba86660b5ab964e1aeaf7324d667c8?urlpath=lab%2Ftree%2Fdemo%2FLorenz.ipynb">here</a>.</p>
 <p>I downloaded a version, and found that the R Kernel was missing! To get the R kernel up and running in Jupyter Lab was a bit more complicated than expected. This guide is meant to break things down step by step. There are certaintly other ways to do this, but this is a tried a true method. Sorry mac Users, I did this at work on my PC.</p>
 <hr />
-</div>
 <div id="install-anaconda" class="section level1">
 <h1>1. Install Anaconda</h1>
 <p>Download <a href="https://www.anaconda.com/download/">here</a>. This gives you a few important things: Jupyter notebooks, and the Anaconda Prompt.</p>
@@ -153,10 +155,13 @@ $(document).ready(function () {
 <hr />
 <p>Open another Anaconda Prompt as Adminstrator and change directories to wherever <code>R.exe</code> is on your computer with <code>cd file path</code>. On my computer it’s: <code>cd C:\Program Files\R\R-3.4.3\bin</code>, but it might be different for you.</p>
 <p>Then run R from within Anaconda Prompt in Admin mode with <code>R.exe</code>.</p>
-<p>You’ll notice that you’re in an R session. From here, run the following three commands. In order, they (1) install the devtools package which gets you the <code>install_github()</code> function, (2) install the IR Kernel from github, and (3) tell Jupyter where to find the IR Kernel (the argument <code>user = FALSE</code> makes this a system-wide installation).</p>
-<p><code>install.packages(&quot;devtools&quot;)</code></p>
-<p><code>devtools::install_github(&quot;IRkernel/IRkernel&quot;)</code></p>
-<p><code>IRkernel::installspec(user = FALSE)</code></p>
+<p>You’ll notice that you’re in an R session. From here, run the following three commands into the terminal.</p>
+<ol style="list-style-type: decimal">
+<li><p><code>install.packages(&quot;devtools&quot;)</code></p></li>
+<li><p><code>devtools::install_github(&quot;IRkernel/IRkernel&quot;)</code></p></li>
+<li><p><code>IRkernel::installspec()</code></p></li>
+</ol>
+<p>In order, they (1) install the devtools package which gets you the <code>install_github()</code> function, (2) install the IR Kernel from github, and (3) tell Jupyter where to find the IR Kernel.</p>
 <hr />
 </div>
 <div id="open-jupyter-lab-and-enjoy-your-new-r-kernel" class="section level1">
@@ -167,7 +172,7 @@ $(document).ready(function () {
 
 </div>
 <hr />
-<p>Lastly, I found the <a href="https://jupyterlab.readthedocs.io/en/stable/">Jupyter Lab User’s Guide</a> to be pretty helpful, and you might too. It overflows with embeded 5-20 second youtube clips. If you find this useful, please share it and add any questions or comments you have.</p>
+<p>Lastly, I found the <a href="https://jupyterlab.readthedocs.io/en/stable/">Jupyter Lab User’s Guide</a> to be pretty helpful, and you might too.</p>
 </div>
 
 
