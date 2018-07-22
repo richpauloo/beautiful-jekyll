@@ -68,21 +68,21 @@ hr.small {
 }
 
 ::-moz-selection {
-  color: white;
+  color: blue;
   text-shadow: none;
   background-color: {{ site.hover-col }};
 }
 ::selection {
-  color: white;
+  color: blue;
   text-shadow: none;
   background-color: {{ site.hover-col }};
 }
 img::selection {
-  color: white;
+  color: blue;
   background: transparent;
 }
 img::-moz-selection {
-  color: white;
+  color: blue;
   background: transparent;
 }
 
