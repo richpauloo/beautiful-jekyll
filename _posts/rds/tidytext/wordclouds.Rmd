@@ -1,8 +1,60 @@
 ---
-output: html_document
+output: 
+  html_document:
+    css: style.css
 ---
 
-5 minute read  
+<style type="text/css"> 
+body { 
+  font-size: 20px;
+  font-family: "Lora"; 
+  color: #404040;
+} 
+blockquote {
+  color: #808080;
+  font-style: italic;
+  font-size: 20px;
+  font-family: "Lora"; 
+}
+code.r{ 
+  font-size: 15px; 
+} 
+pre { 
+  font-size: 11px 
+} 
+h1 { /* Header 1 */
+  font-size: 34px;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 900;
+}
+h2 { /* Header 2 */
+  font-size: 32px;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 900;
+}
+h3 { /* Header 3 */
+  font-size: 30px;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 900;
+}
+h4 { /* Header 4 */
+  font-size: 28px;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 900;
+}
+h5 { /* Header 5 */
+  font-size: 26px;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 900;
+}
+h6 { /* Header 6 */
+  font-size: 22px;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 900;
+}
+</style>
+
+**5 minute read**  
 
 I recently came across the `tidytext` package in R, with the accompanying book: [Text Mining in R](https://www.tidytextmining.com/) by David Robinson and Julia Silge. I found it very cogent and practical for basic text mining and NLP problems.  
 
@@ -14,11 +66,11 @@ There are a pleathora of out-of-the-box tools that help with basic natural langu
 * built in dataframes of common stop-words (e.g. - a, an, and, the, but)
 * functions for calculating tf, idf, and tf-idf
 
-After playing around a bit with examples, I thoght it would be interesting to see what my 38 page research prospectus which I spent months slaving over boiled down to. Here’s how I did it.  
+After playing around a bit with examples, I thought it would be interesting to see what my 38 page research prospectus which I spent months slaving over boiled down to. Here's how I did it.  
 
 ***
 
-## Bring in Data
+# Bring in Data
 I first saved my *.docx* file as a *.txt* in *UTF-8* encoding because, in short, it's easier for R to read. The result is a very messy table, which I won't print here.
 ```{r}
 path <- 'rp.txt' # the local file path to my research prospectus
@@ -26,7 +78,7 @@ path <- 'rp.txt' # the local file path to my research prospectus
 dat <- read.table(path, header = FALSE, fill = TRUE) # fill = TRUE b/c rows are of unequal length
 ```
 
-## Load libraries
+# Load libraries
 ```{r, message = FALSE, warning = FALSE}
 library(dplyr) # for data wrangling
 library(tidytext) # for NLP
@@ -37,7 +89,7 @@ library(DT) # for dynamic tables
 library(tidyr)
 ```
 
-## 1. Tidy
+# 1. Tidy
 Since the package we're using adheres to tidy data principles, step 1 is to get this messy table into a one column data frame, with one word in each row.
 ```{r, message = FALSE, warning = FALSE}
 # reshape the .txt data frame into one column
@@ -47,7 +99,7 @@ tidy_dat$word %>% length() # there are 10,480 tokens in my document
 unique(tidy_dat$word) %>% length() # and of these, 2,866 are unique 
 ```
 
-## 2. Tokenize
+# 2. Tokenize
 The next step is to *tokenize*, or boil the dataframe down down to only unique observations, and count the number of each observation. To perform this, we use the out-of-the-box function `unnest_tokens()`, which takes 3 arguments:  
 
 * a tidy data frame
@@ -69,11 +121,11 @@ tokens %>% head(10)
 ```
 Of the 10, only 2 actually tell us something about what's written about: *groundwater*, and *water*. Cleaning natural language is like panning for gold: most of language is useless, but every once in a while we find a gold nugget. We want to get only the nuggets.
 
-![](/Users/richpauloo/Documents/GitHub/richpauloo.github.io/img/gold.jpg)  
+![](gold.jpg)  
 This is you tokenizing.
 
 
-## 3. Remove Stop Words, Numbers, Etc.
+# 3. Remove Stop Words, Numbers, Etc.
 Luckily, `tidytext` has some built-in libraries of stop words. We'll use an `anti_join()` to get rid of stop words anc clean our tokens. 
 ```{r}
 # remove stop words
@@ -107,7 +159,7 @@ tokens_clean <- tokens_clean %>%
   anti_join(uni_sw, by = "word")
 ```
 
-## 4. Make a Word Cloud of the top 50 words
+# 4. Make a Word Cloud of the top 50 words
 And just like that, an easy word cloud. In fact, this code was so simple and fun that I wrapped it into a [Shiny App](https://richpauloo.shinyapps.io/word_cloud_app).
 ```{r}
 # define a nice color palette
@@ -118,10 +170,10 @@ tokens_clean %>%
   with(wordcloud(word, n, random.order = FALSE, max.words = 50, colors=pal))
 ```
 
-![](/Users/richpauloo/Documents/GitHub/richpauloo.github.io/img/YES.gif)
+![](YES.gif)
 
 
-## Data Table
+# Data Table
 Just for fun, let's add a searchable data table with the `DT` package.
 ```{r}
 tokens_clean %>%

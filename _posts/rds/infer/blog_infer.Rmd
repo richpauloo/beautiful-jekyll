@@ -1,10 +1,60 @@
 ---
-output: html_document
+output: 
+  html_document:
+    css: style.css
 ---
 
-# Infer: a package for tidy Statistical Inference  
+<style type="text/css"> 
+body { 
+  font-size: 20px;
+  font-family: "Lora"; 
+  color: #404040;
+} 
+blockquote {
+  color: #808080;
+  font-style: italic;
+  font-size: 20px;
+  font-family: "Lora"; 
+}
+code.r{ 
+  font-size: 15px; 
+} 
+pre { 
+  font-size: 11px 
+} 
+h1 { /* Header 1 */
+  font-size: 34px;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 900;
+}
+h2 { /* Header 2 */
+  font-size: 32px;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 900;
+}
+h3 { /* Header 3 */
+  font-size: 30px;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 900;
+}
+h4 { /* Header 4 */
+  font-size: 28px;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 900;
+}
+h5 { /* Header 5 */
+  font-size: 26px;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 900;
+}
+h6 { /* Header 6 */
+  font-size: 22px;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 900;
+}
+</style>
 
-10 minute read  
+**15 minute read**  
 
 This blog post is my attempt to process and expand on an excellent talk delivered by Andrew Bray at rstudio::conf2018. [The slides (PDF) from Andrew's presentation can be found at this github link](https://github.com/andrewpbray/talks/blob/master/2018/infer-rstudioconf-2018.pdf).  
 
