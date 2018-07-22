@@ -1,0 +1,346 @@
+---
+output: html_document
+---
+
+<style type="text/css"> 
+body { 
+  font-size: 20px;
+  font-family: "Lora"; 
+  color: #404040;
+} 
+blockquote {
+  color: #808080;
+  font-style: italic;
+  font-size: 20px;
+  font-family: "Lora"; 
+}
+code.r{ 
+  font-size: 16px; 
+} 
+pre { 
+  font-size: 16px 
+} 
+h1 { /* Header 1 */
+  font-size: 34px;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 900;
+}
+h2 { /* Header 2 */
+  font-size: 32px;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 900;
+}
+h3 { /* Header 3 */
+  font-size: 30px;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 900;
+}
+h4 { /* Header 4 */
+  font-size: 28px;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 900;
+}
+h5 { /* Header 5 */
+  font-size: 26px;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 900;
+}
+h6 { /* Header 6 */
+  font-size: 22px;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 900;
+}
+</style>
+
+**5 minute read**  
+
+# Note
+This is an .Rmd script that I put together for a workshop at the [UC Davis R User's Group](https://d-rug.github.io/blog/2017/Rich-Pauloo-on-using-RMarkdown).  
+
+If you want to follow along with the script and exercies, you can find all of the material (including this .Rmd file) at [this github repo](https://github.com/richpauloo/RMarkdown-workshop). Enjoy!  
+ 
+***
+
+# Introduction  
+
+Welcome to the R Markdown workshop!
+
+The goals of this workshop are to introduce you to some of the functionality of R Markdown. Afterward, you might want to never want to write in .R files again! The learning curve isn't too steep, and RMarkdown is a great entry point into easily making crisp PDFs and HTMLs that you can share, resumes, and even static websites with blogdown + Hugo.
+
+Today we'll cover:  
+
+* basic formatting  
+* organizing code  
+* tools for creating a resume  
+* tools for creating a website  
+
+That thing above is called the YAML header. Its specifies some text to render, plus some global options. For instance, this .Rmd file will render into a html_document (options include: pdf_document, word_document, beamer_presentation, ioslides_presentation). We can also set some global options for figure sizes, and add fun things like a table of contents in our output.
+
+In this presentation, I'll focus on *html_documents* because they render quickly, are easily deployed over the web for sharing, and can contain html widgets like interactive data tables and leaflets.
+
+```{r setup, include=FALSE}
+# ignore this for now. We'll come back to it.
+# global options apply to all chunks
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE)
+```
+
+# Formatting
+
+## Header 2
+### Header 3
+#### Header 4
+##### Header 5
+###### Header 6
+
+Some text without a header
+
+**some bold text**
+
+_italics_
+
+Some fancy math:  $A = \pi*r^{2}$ 
+
+`some code`, for instance `library(dplyr)`
+
+[A useful link to generate fancy math](https://www.codecogs.com/latex/eqneditor.php)
+
+[R Markdown cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf)
+
+[Another R Markdown Cheatsheet](https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf)
+
+***
+^ horizontal line (slide break in a slideshow)
+
+End a line with 2 spaces to start a new paragraph:
+
+For example consider this blockquote:
+
+> "I only end lines with one space." 
+- Mark Twain
+
+> "I end lines with two spaces to indicate a new line."   
+- Mark Twain
+
+Obama reading "Where the Wild Things Are"  
+![](obama_wild_things.gif)
+
+***
+
+# Why Chunks?
+
+A chunk is where R code happens. Write code just as you would in a .R file, and run lines of code one-by-one, highlighted as a group, or by clicking on the arrows in the code chunk. You can run a block of code all at once with a click, or run all chunks above it. 
+
+```{r a meaningless title to rename, message = FALSE}
+#install.packages("readr")
+library(readr)
+dat <- read_csv("class_dat.csv")
+names(dat)
+
+# give make some more intuitive column names
+colnames(dat) <- c("#","group","years","md","rmd","latex","jupyter","blogdown","code","files","resume","website","other","potatoes","start_date","end_date","time","time_s","network")
+```
+
+**Chunk Options**  
+`echo = TRUE` Display code along with results.  
+`eval = TRUE` Evaluate code and include results.  
+`warning = TRUE` Display warnings.  
+`error = FALSE` Display errors.  
+`message = TRUE` Display messages.  
+`tidy = FALSE`  Reformat code in a tidy way when displaying.  
+`cache = FALSE` Cache results for future renders.  
+`comment = "##"` Default comments to place before results.  
+`fig.width = 7` Width (inches) for plots.  
+`fig.height = 7` Height (inches) for plots.  
+ 
+ ***
+
+## Exercise Set 1:
+
+1. Remove (message = FALSE) in Chunk 2, then knit. What happens in the output? Change it back.
+2. Instead of C&Ping this in every chunk, paste 'warning = FALSE' (without quotes) as a global option in Chunk 1: Setup. So your line 27 should look like: `knitr::opts_chunk$set(echo = TRUE, warning = FALSE)`
+3. Rename Chunk 2 to 'read data', which is a better description, and which increases the navigability of your code.
+4. Insert a new chunk with the shortcut: Alt + Command + i
+
+***
+
+# Coding in Chunks
+
+In Rmd, I think of chunks as paragraphs. Each chunk of code is a set of operations that run together. When I know I have one piece that works, I move on to another chunk. This makes debugging easier. When I open a script I haven't looked at in a while, it's easy to see my workflow, broken into chunks, and I can jump right to the places that I need to be.
+
+## Viewing data in Rmd
+```{r eda, warning=FALSE, message=FALSE, results=FALSE}
+# visualizing data is much easier in .Rmd compared to .R
+#install.packages("dplyr")
+library(dplyr)
+glimpse(dat)
+dat
+```
+
+## What grad groups are the most thorough?
+```{r completion time, echo=FALSE}
+# notice echo=FALSE, because I don't want to print code in the output, only the graph. 
+#install.packages("ggplot2")
+library(ggplot2)
+dat %>% 
+  filter(!is.na(group)) %>% 
+  group_by(group) %>% 
+  summarise(avg_time = mean(time_s)) %>% 
+  ggplot(aes(x=group, y = avg_time)) +
+  geom_col() +
+  coord_flip()
+```
+
+## How do we feel about Potatoes?
+```{r potatoes}
+# run all lines of code above this plot with one button, rather than highlighting.
+potatoes_plot<- dat %>% 
+  filter(!is.na(potatoes) & !is.na(group)) %>% 
+  ggplot(aes(x=potatoes, fill = group)) +
+  xlab(NULL) +
+  geom_bar()
+
+potatoes_plot
+```
+
+**Ecologists unamimously select sweet potatoes if forced to chose between them and french fries.**
+
+***
+
+# Tables
+
+RMarkdown has some great out-of-the-box options for dumping data into a table. `kable()` is the function for formatting data in a table included in `knitr`. Combined with dplyr, it's relatively easy to operate on a data frame, then pipe it into a table.
+
+## Kable
+```{r kable, warning = FALSE}
+#install.packages("knitr"); install.packages("kableExtra")
+library(knitr)
+library(kableExtra)
+dat %>% select(group, years, potatoes) %>%
+  kable(dat, format = "html") %>%
+  kable_styling(bootstrap_options = c("striped", "hover"), full_width = FALSE)
+```
+
+Another option that works well with webpages is the `DT` library's `datatable`. This creates an interactive HTML widget that you can embed in html_documents. DTs are searchable and can rank data. They can also hold very large data frames by collapsing data in a viewer. 
+
+## DT
+```{r DT}
+#install.packages("DT")
+library(DT)
+dat %>% select(group, years, potatoes, time_s, network) %>%
+  filter(potatoes == "sweet potato fries") -> temp
+DT::datatable(temp)
+```
+
+
+***
+
+# HTML widgets
+
+Perhaps one of the coolest applications of RMarkdown is the support of HTML widgets. You've already seen of that in action with DT. Basically, in the backend, reactivity is coded into Javascript and D3, and there are many out-of-the-box tools available, [which you can explore here](http://www.htmlwidgets.org/showcase_leaflet.html).
+
+## Leaflet
+```{r leaflet}
+#install.packages("leaflet"); install.packages("sp")
+library(leaflet)
+library(sp)
+water <- read_csv("water_dat.csv") # water quality data from 1988
+coords <- cbind(water$Longitude, water$Latitude)
+pts <- SpatialPoints(coords)
+ptsdf <- SpatialPointsDataFrame(pts, data = water[,1:4])
+
+ptsdf %>%
+  leaflet() %>%
+  addTiles() %>%
+  addCircleMarkers()
+
+# fancy leaflets are not that much more difficult to make
+# define color palette to be used. blue values correspond to fresh water, red to salty water
+
+co = c("blue","steelblue2","steelblue1","seashell1","orangered1","red3")
+pal = colorBin(palette = co,
+               domain = water$Result,
+               bins = c(0,200,400,600,800,1000,5000,10000,50000))
+
+ptsdf %>%
+  leaflet() %>%
+  addTiles() %>%
+  addCircleMarkers(color = ~pal(Result),
+                   radius = 4,
+                   opacity = 0.8,
+                   stroke = FALSE,
+                   popup = paste(ptsdf$Result, " mg/L TDS", "<br>",
+                    "Database: ", ptsdf$Database, "<br>",
+                    "Well ID: ", ptsdf$Well_ID, "<br>",
+                    "Latitude: ", ptsdf$Latitude, "<br>",
+                    "Longitude: ", ptsdf$Longitude)) %>%
+
+    addLegend("topright", pal = pal, # use custom palette
+              values = ~Result,
+              title = "TDS in the Tulare Basin (1988)",
+              labFormat = labelFormat(suffix = " mg/L"),
+              opacity = 1
+    ) %>%
+
+    addProviderTiles(providers$Esri.WorldTerrain)
+  
+```
+
+## dygraphs
+```{r dygraphs}
+#install.packages("dygraphs")
+library(dygraphs)
+dygraph(nhtemp, main = "New Haven Temperatures") %>%
+  dyRangeSelector(dateWindow = c("1920-01-01", "1960-01-01"))
+```
+
+## Plotly
+```{r plotly, message=FALSE, warning=FALSE}
+#install.packages("plotly")
+library(plotly)
+ggplotly(potatoes_plot)
+```
+
+## NetworkD3
+```{r networkd3, message=FALSE}
+#install.packages("networkD3")
+library(networkD3)
+data(MisLinks, MisNodes)
+forceNetwork(Links = MisLinks, Nodes = MisNodes, Source = "source",
+             Target = "target", Value = "value", NodeID = "name",
+             Group = "group", opacity = 0.4)
+```
+
+***
+
+## Exercise Set 2:  
+1. [Follow this link](https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html) and find 2 bootstrap_options that you want to try out, and then put them in, and view the results.
+
+2. Don't forget to cite your soures.[@Land1971] Put 'bibliography: ref.bib' in a new line in the YAML header (without the quotation marks), knit the document, and re-examine this question and the footer fo the document. What's different? Now open ref.bib in the R Markdown Workshop folder and inspect its contents. Add two more citations somewhere in the document according to their code (usually format: lastNameYear), and re-render the document. Ask someone if you're not sure how to generate a .bib file.
+
+3. Create a table of contents in your HTML by changing the last line of the YAML header to include the following text:  
+
+output: 
+  html_document:
+    toc: TRUE
+    smooth_scroll: FALSE
+
+4. Now change the last line of the YAML header to:  
+
+output: 
+  html_document:  
+    code_folding: hide
+    toc: TRUE
+    toc_float: TRUE
+    
+Make sure your Viewer is wide enough, or alternatively, open the html doc in a broswer. What happened to code? What happened to the table of contents?
+
+*** 
+
+# Resumes
+[Ryan Peek's Rmd CV template](https://github.com/ryanpeek/markdown_cv)  
+[Lucy McGowan's Rmd CV template](https://github.com/LucyMcGowan/rmd-cv)
+
+# Websites
+[A good blog post](http://livefreeordichotomize.com/2017/08/08/how-to-make-an-rmarkdown-website/)  
+[Blogdown and Hugo](https://bookdown.org/yihui/blogdown/)
+
