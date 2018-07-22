@@ -68,7 +68,6 @@ h6 {
 }
 </style>
 
-<link href="data:text/css;charset=utf-8,%3Cstyle%20type%3D%22text%2Fcss%22%3E%20body%20%7B%20font%2Dsize%3A%2020px%3B%0Afont%2Dfamily%3A%20%22Lora%22%3B%20color%3A%20%23404040%3B%0A%7D%20blockquote%20%7B%0Acolor%3A%20%23808080%3B%0Afont%2Dstyle%3A%20italic%3B%0Afont%2Dsize%3A%2020px%3B%0Afont%2Dfamily%3A%20%22Lora%22%3B%20%7D%0Acode%2Er%7B%20font%2Dsize%3A%2015px%3B%20%7D%20pre%20%7B%20font%2Dsize%3A%2011px%20%7D%20h1%20%7B%20%0Afont%2Dsize%3A%2034px%3B%0Afont%2Dfamily%3A%20%27Open%20Sans%27%2C%20%27Helvetica%20Neue%27%2C%20Helvetica%2C%20Arial%2C%20sans%2Dserif%3B%0Afont%2Dweight%3A%20900%3B%0A%7D%0Ah2%20%7B%20%0Afont%2Dsize%3A%2032px%3B%0Afont%2Dfamily%3A%20%27Open%20Sans%27%2C%20%27Helvetica%20Neue%27%2C%20Helvetica%2C%20Arial%2C%20sans%2Dserif%3B%0Afont%2Dweight%3A%20900%3B%0A%7D%0Ah3%20%7B%20%0Afont%2Dsize%3A%2030px%3B%0Afont%2Dfamily%3A%20%27Open%20Sans%27%2C%20%27Helvetica%20Neue%27%2C%20Helvetica%2C%20Arial%2C%20sans%2Dserif%3B%0Afont%2Dweight%3A%20900%3B%0A%7D%0Ah4%20%7B%20%0Afont%2Dsize%3A%2028px%3B%0Afont%2Dfamily%3A%20%27Open%20Sans%27%2C%20%27Helvetica%20Neue%27%2C%20Helvetica%2C%20Arial%2C%20sans%2Dserif%3B%0Afont%2Dweight%3A%20900%3B%0A%7D%0Ah5%20%7B%20%0Afont%2Dsize%3A%2026px%3B%0Afont%2Dfamily%3A%20%27Open%20Sans%27%2C%20%27Helvetica%20Neue%27%2C%20Helvetica%2C%20Arial%2C%20sans%2Dserif%3B%0Afont%2Dweight%3A%20900%3B%0A%7D%0Ah6%20%7B%20%0Afont%2Dsize%3A%2022px%3B%0Afont%2Dfamily%3A%20%27Open%20Sans%27%2C%20%27Helvetica%20Neue%27%2C%20Helvetica%2C%20Arial%2C%20sans%2Dserif%3B%0Afont%2Dweight%3A%20900%3B%0A%7D%0A%3C%2Fstyle%3E" rel="stylesheet" type="text/css" />
 
 </head>
 
@@ -125,6 +124,55 @@ $(document).ready(function () {
 </div>
 
 
+<style type="text/css"> 
+body { 
+  font-size: 20px;
+  font-family: "Lora"; 
+  color: #404040;
+} 
+blockquote {
+  color: #808080;
+  font-style: italic;
+  font-size: 20px;
+  font-family: "Lora"; 
+}
+code.r{ 
+  font-size: 16px; 
+} 
+pre { 
+  font-size: 16px 
+} 
+h1 { /* Header 1 */
+  font-size: 34px;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 900;
+}
+h2 { /* Header 2 */
+  font-size: 32px;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 900;
+}
+h3 { /* Header 3 */
+  font-size: 30px;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 900;
+}
+h4 { /* Header 4 */
+  font-size: 28px;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 900;
+}
+h5 { /* Header 5 */
+  font-size: 26px;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 900;
+}
+h6 { /* Header 6 */
+  font-size: 22px;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 900;
+}
+</style>
 <p><strong>5 minute read</strong></p>
 <p>I was recently pretty impressed with <a href="http://jupyter.org/">Jupyter’s</a> newest creation, the Jupyter Lab IDE. You can test drive an online demostration of Jupyter Lab with a Python and R kernel <a href="https://mybinder.org/v2/gh/jupyterlab/jupyterlab-demo/18a9793b58ba86660b5ab964e1aeaf7324d667c8?urlpath=lab%2Ftree%2Fdemo%2FLorenz.ipynb">here</a>.</p>
 <p>I downloaded a version, and found that the R Kernel was missing! To get the R kernel up and running in Jupyter Lab was a bit more complicated than expected. This guide is meant to break things down step by step. There are certaintly other ways to do this, but this is a tried a true method. Sorry mac Users, I did this at work on my PC.</p>

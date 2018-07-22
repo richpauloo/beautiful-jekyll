@@ -15,10 +15,10 @@ blockquote {
   font-family: "Lora"; 
 }
 code.r{ 
-  font-size: 15px; 
+  font-size: 16px; 
 } 
 pre { 
-  font-size: 11px 
+  font-size: 16px 
 } 
 h1 { /* Header 1 */
   font-size: 34px;
