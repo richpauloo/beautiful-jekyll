@@ -29,7 +29,6 @@ navbar-links:
     - CA Well Completion Reports: "oswcr_1.html"
     - Drought Vulnerability: "flexdashboard_socio.html"
     - LDA, QDA, RF, and Boosted Trees: "landslides.html"
-    - BC leaflet example: "example.html"
   Apps:
     - Groundwater Quality Mapper: "https://richpauloo.shinyapps.io/tds_leaflet/"
     - Word Cloud Generator: "https://richpauloo.shinyapps.io/word_cloud_app/"
