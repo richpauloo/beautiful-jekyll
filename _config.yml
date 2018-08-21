@@ -27,7 +27,7 @@ navbar-links:
   Research: "research"
   Data Science:
     - CA Well Completion Reports: "oswcr_1.html"
-    - Drought Vulnerability: "flexdashboard_socio.html"
+    - Domestic Well Vulnerability: "ca_water_data_summit.html"
     - LDA, QDA, RF, and Boosted Trees: "landslides.html"
   Apps:
     - Groundwater Quality Mapper: "https://richpauloo.shinyapps.io/tds_leaflet/"
