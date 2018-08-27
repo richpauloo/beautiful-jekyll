@@ -83,11 +83,12 @@ hawaii <- paste(sep = "<br/>",
                 "My favorite place to explore",
                 "<b><a href='https://www.google.com/maps/place/Honolulu,+HI/@21.3708238,-158.0452439,11z/data=!4m13!1m7!3m6!1s0x7bffdb064f79e005:0x4b7782d274cc8628!2sHawaii!3b1!8m2!3d19.8967662!4d-155.5827818!3m4!1s0x7c00183b8cc3464d:0x4b28f55ff3a7976c!8m2!3d21.3047285!4d-157.8570557'>Google Maps</a></b>"
 )
+```
 
 
-
-
-leaflet(width = "100%") %>% addTiles() %>%
+```{r}
+leaflet(width = "100%") %>% 
+  addTiles() %>%
   addMarkers(8.609717, 47.408392, popup = eawag) %>% 
   addMarkers(-122.251846, 37.872029, popup = berkeley) %>%
   addMarkers(-121.755361, 38.537958, popup = grad) %>%
@@ -100,11 +101,7 @@ leaflet(width = "100%") %>% addTiles() %>%
   addMarkers(-117.244199, 32.808437, popup = oscars) %>%
   addMarkers(-76.999721, 38.886027, popup = capitol) %>%
   addMarkers(-158.006448, 21.488432, popup = hawaii) %>%
-  addProviderTiles(providers$Stamen.Watercolor) %>% 
+  addProviderTiles(providers$OpenStreetMap) %>% 
   setView(-82,40, zoom=2)
-
-
-
-
 ```
 
