@@ -17,7 +17,7 @@ baseurl: ""
 title: Rich Pauloo
 
 # Short description of your site
-description: Rich Pauloo's personal page.
+description: Rich Pauloo's nerd blog and scientific research page.
 
 # --- Navigation bar options --- #
 
@@ -26,8 +26,9 @@ navbar-links:
   About: "aboutme"
   Research: "research"
   Data Science:
-    - CA Well Completion Reports: "oswcr_1.html"
     - Domestic Well Vulnerability: "flexdash.html"
+    - CA Well Completion Reports: "oswcr_1.html"
+    - Statistical Significance Tests: "stat.html" 
     - LDA, QDA, RF, and Boosted Trees: "landslides.html"
   Apps:
     - Groundwater Quality Mapper: "https://richpauloo.shinyapps.io/tds_leaflet/"
