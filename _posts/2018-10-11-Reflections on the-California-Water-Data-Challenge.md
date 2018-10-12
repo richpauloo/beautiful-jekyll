@@ -1,5 +1,6 @@
 ---
-output: html_document
+layout: post
+title: Reflections on the 2018 California Water Data Challenge
 share-img: /img/path.png
 ---
 
@@ -56,9 +57,11 @@ When working with my team, I was continually blown away by how many smart ideas 
 
 Towards the end of our project, some of our machine learning models were giving us results that were very difficult to interpret. I was working into the night trying to make sense of it all. I was pretty stressed, and it was all my own doing! I was the one setting these unrealistic expectations for myself. My fantastic teammate Hervé and I had an honest talk about it, and he reminded me that nothing is worth your sanity. Then he sent me this great Slack message, along with this photo.  
 
-```{r, out.width = "1000px", echo=FALSE}
-knitr::include_graphics("this-creature-has-adapted-to-the-crushing-pressure-and-oppressive-darkness.png")
-```
+<!-- # ```{r, out.width = "1000px", echo=FALSE} -->
+<!-- # knitr::include_graphics("this-creature-has-adapted-to-the-crushing-pressure-and-oppressive-darkness.png") -->
+<!-- # ``` -->
+
+<img style="width:100%;" id="image" src="this-creature-has-adapted-to-the-crushing-pressure-and-oppressive-darkness.png">
 
 > Now call it a day, go home, do yoga at home or work on your furniture project. Your brain is almost your only tool and you have to take care of its well being.  
 
