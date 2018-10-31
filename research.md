@@ -2,6 +2,7 @@
 layout: page
 title: Research
 subtitle: here are a few of my academic projects
+show-avatar: false
 ---
 
 Global groundwater reserves are the largest store of freshwater resources not locked in frozen ice caps, glaciers, and continental ice sheets.[^fn1] Around the world, groundwater storage is in critial decline [^fn2] [^fn3], and groundwater quality faces equal if not more severe threats [^fn4] [^fn5] [^fn6]. 
