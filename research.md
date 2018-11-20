@@ -19,8 +19,7 @@ I am grateful to my funding sources, without which the following projects would 
 ## Predicting Domestic Well Vulnerability to Drought with Statistical & Machine Learning
 During the 2012-2016 drought, the state received more than 2,500 domestic well failure reports, the majority of which were in California's Central Valley [^fn7]. This left thousands of people without a reliable source of drinking water for months and, in some cases, years. Recent developments in California's Open and Transparent Water Data Platform (AB-1755) have made water data in California more transparent and available than ever before. In particular, well construction information, validation datasets of actual well failure, and groundwater level measurements are concurrently available, enabling the firstever regional-scale models of domestic well failure in California's Central Valley. This research utilizes big geospatial timeseries data to model domestic well failure, and machine learning models coupled with climate change predictors to predict future vulnerability to well failure.  
 
-Questions:  
-
+Questions:
 * Which domestic wells will be vulnerable in the next drought?  
 * Are disadvantaged households disproportionately affected by drought-vulnerable wells?  
 * Can machine learning identify characteristics of the vulnerable wells that will worsen with climate change?  
@@ -32,8 +31,7 @@ Questions:
 ## Regional-Scale Groundwater Quality Management Modeling in Closed Hydrologic Basins
 Across the word, closed hydrologic basins form when basin outflow exceeds inflow and predominantly exits via evapotranspiration, leading to a subsequent accumulation of dissolved solids, and a decline in groundwater quality. Examples include the Dead Sea (Israel/Joran), the Great Salt Lake (Utah, USA), and Mono Lake (California, USA). Groundwater pumping and irrigation in agriculturally intensive regions of the world is closing basins, with unexplored consequences on groundwater quality and the energy required to halt or desalinate these resources. This research examines regional groundwater quality decline due to closed basin salinization in the Tulare Basin of California's Central Valley. 
 
-Question:  
-
+Question:
 * What are the depths, timescales, and contaminant budgets of closed basin groundwater salinization?  
 
 [![groundwater salinization conceptual model](img/gw_sal.png)](https://github.com/richpauloo/Monte-Carlo-Mixing-Model)
@@ -45,12 +43,10 @@ Hydrogeophysical models of fluid flow in porous media (aquifers), and the equati
 
 This research seeks to develop simplified upscaled numerical contaminant transport models that preserve 3D transport physics, for application towards modern regional-scale groundwater quality management.  
 
-Core Question:  
-
+Core Question:
 * Can 3D spatial-temporal contaminant transport processes be represented in 2D, and if so what information is lost?  
 
-The developed models will allow hypothesis testing into currently unresearched phenomena in groundwater resources modeling and management:  
-
+The developed models will allow hypothesis testing into currently unresearched phenomena in groundwater resources modeling and management:
 * What effect will Managed Aquifer Recharge have on regional groundwater quality?  
 * Can groundwater salinization be mitigated, and if so under what timescales, at what cost, and by which specific practices?  
 
