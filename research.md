@@ -39,15 +39,15 @@ Question:
 ***
 ## Upscaling the Advection Dispersion Equation
 
-Nonpoint-source groundwater contamination threatens to gradually degrade the quality of vast quantities of groundwater on time scales of decades to centuries in many parts of the world. Hydrogeophysical models of fluid flow in porous media (aquifers), and the equations to solve contaminant transport problems were initially developed for field-scale point-source pollutants. Emerging contaminants of concern from agricultural nutrient management and closed basin salinization threaten the sustainability of regional-scale groundwater resources, and demand currently unavailable physical models of contaminant transport on computationally intractable scales. Methods of modeling regional-scale solute transport, including the effects of heterogeneity that produce non-Fickian transport, are urgently needed to ascertain what contamination source and groundwater quantity management actions are needed to avert irreversible degradation of groundwater quality.  
+Nonpoint-source groundwater contamination threatens to gradually degrade the quality of vast quantities of groundwater on time scales of decades to centuries in many parts of the world. Hydrogeophysical models of fluid flow in porous media (aquifers), and the equations to solve contaminant transport problems were initially developed for field-scale point-source pollutants. Emerging contaminants of concern from agricultural nutrient management and closed basin salinization threaten the sustainability of regional-scale groundwater resources, and demand currently unavailable physical models of contaminant transport.   
 
-This research seeks to develop simplified upscaled numerical contaminant transport models that preserve 3D transport physics, for application towards modern regional-scale groundwater quality management.  
+This research seeks to develop simplified upscaled numerical contaminant transport models that preserve 3D non-Fickian transport physics, for application towards modern regional-scale groundwater quality management.  
 
 Core Question:
 
 * Can non-Fickian contaminant transport effects produced by 3D heterogeneity be represented in 2D, and if so, what information is lost?  
 
-The developed models will allow hypothesis testing into currently unresearched phenomena in groundwater resources modeling and management:
+The developed methods will allow hypothesis testing into currently unresearched phenomena in groundwater resources modeling and management:
 * What effect will Managed Aquifer Recharge have on regional groundwater quality?  
 * Can groundwater salinization be mitigated, and if so under what timescales, at what cost, and by which specific practices?  
 
