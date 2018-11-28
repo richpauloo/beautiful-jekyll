@@ -28,8 +28,8 @@ navbar-links:
   Data Science:
     - Domestic Well Vulnerability: "flexdash.html"
     - CA Well Completion Reports: "oswcr_1.html"
+    - Predicting Fatal Landslides: "landslides.html"
     - Statistical Significance Tests: "stat.html" 
-    - LDA, QDA, RF, and Boosted Trees: "landslides.html"
   Apps:
     - Groundwater Observatory: "http://ucwater.org/gw_obs/"
     - OSWCR Tool: "http://ucwater.org/oswcr/"
