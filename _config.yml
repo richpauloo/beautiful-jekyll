@@ -31,8 +31,8 @@ navbar-links:
     - Statistical Significance Tests: "stat.html" 
     - LDA, QDA, RF, and Boosted Trees: "landslides.html"
   Apps:
-    - Groundwater Observatory: "https://richpauloo.shinyapps.io/gw_observatory/"
-    - OSWCR Tool: "https://shiny.lawr.ucdavis.edu/shiny/oswcrd/"
+    - Groundwater Observatory: "http://ucwater.org/gw_obs/"
+    - OSWCR Tool: "http://ucwater.org/oswcr/"
     - AbstR: "https://richpauloo.shinyapps.io/abstr/"
     - Tulare TDS: "https://richpauloo.shinyapps.io/tds_leaflet/"
     - Word Cloud Generator: "https://richpauloo.shinyapps.io/word_cloud_app/"
