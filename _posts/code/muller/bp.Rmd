@@ -8,11 +8,11 @@ output:
 
 **5 minute read**
 
-After years of investigation, the Department of Justice released [a redacted copy of the Muller Report](https://www.cnn.com/2019/04/18/politics/full-mueller-report-pdf/index.html) on Thursday April 18, 2019. The report weighs in at a heft 448 pages, and covers everything Russian interference in 2016 presidential election, to the private testimony of Michael Cohen, and whether or not President Trump may have obstructed justice.  
+After years of investigation, the Department of Justice released [a redacted copy of the Muller Report](https://www.cnn.com/2019/04/18/politics/full-mueller-report-pdf/index.html) on Thursday April 18, 2019. The report weighs in at a hefty 448 pages, and covers everything from Russian interference in 2016 presidential election, to the private testimony of Michael Cohen, and whether or not President Trump may have obstructed justice.    
 
-I don't have all day to read this report, but I am interested to see what I can't learn this afternoon by scraping the report and doing a cursory text analysis.  
+I don't have all day to read this report, but I am interested to see what I can learn in a short afternoon by scraping the report and doing a cursory text and sentiment analysis.  
 
-I'm going to rely on two main packages for the analysis: [`pdftools`](https://github.com/ropensci/pdftools) for scraping the text of the report, and [`tidytext`](https://www.tidytextmining.com/) for general text mining functions.  
+I'm going to rely on two main packages: [`pdftools`](https://github.com/ropensci/pdftools) for scraping the text of the report, and [`tidytext`](https://www.tidytextmining.com/) for general text mining functions.  
 
 ```{r, warning=FALSE, message=FALSE, error=FALSE}
 library(pdftools)
