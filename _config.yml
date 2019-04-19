@@ -25,7 +25,7 @@ description: Rich Pauloo's nerd blog and scientific research page.
 navbar-links:
   About: "aboutme"
   Research: "research"
-  Data Science:
+  Data Sci:
     - Domestic Well Vulnerability: "flexdash.html"
     - CA Well Completion Reports: "oswcr_1.html"
     - Predicting Fatal Landslides: "landslides.html"
@@ -36,9 +36,9 @@ navbar-links:
     - AbstR: "https://richpauloo.shinyapps.io/abstr/"
     - Tulare TDS: "https://richpauloo.shinyapps.io/tds_leaflet/"
     - Word Cloud Generator: "https://richpauloo.shinyapps.io/word_cloud_app/"
-  Docs:
+  Resume: "resume.html"
     #- CV: "richpauloo.github.io/rap-rmarkdown-cv.pdf"
-    - Resume: "resume.html"
+    #- Resume: 
 
 
 # Image to show in the navigation bar - image must be a square (width = height)
