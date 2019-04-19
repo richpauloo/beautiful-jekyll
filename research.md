@@ -5,7 +5,7 @@ subtitle: a gallery of intellectual art projects
 show-avatar: false
 ---
 
-I'm a physical scientist at heart, and a computational hydrogeophysicist by practice. My comfort zone is a blend of quantitative analysis, end-to-end data science, and the visualization and communication of large and complex datasets, often with spatial and temporal components. I use a variety of techniques, from finite element and finite difference numerical models to simulate 3D physical hydrologic systems of groundwater flow and contaminant transport in aquifers, to spatially-explicit machine learning and geostastical models that predict well vulnerability to drought.  
+I'm a physical scientist at heart, and a computational hydrogeogeologist by practice. My comfort zone is a blend of quantitative analysis, end-to-end data science, and the visualization and communication of large and complex datasets, often with spatial and temporal components. I use a variety of techniques, from finite element and finite difference numerical models to simulate 3D physical hydrologic systems of groundwater flow and contaminant transport in aquifers, to spatially-explicit machine learning and geostastical models that predict well vulnerability to drought.  
 
 My research at UC Davis primarily investigates groundwater quantity and quality. Global groundwater reserves are the largest store of freshwater resources not locked in frozen ice caps, glaciers, and continental ice sheets.[^fn1] Around the world, groundwater storage is in critical decline [^fn2] [^fn3], and groundwater quality faces equal if not more severe threats [^fn4] [^fn5] [^fn6].  
 
