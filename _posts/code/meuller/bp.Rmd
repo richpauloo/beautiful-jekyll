@@ -8,7 +8,7 @@ output:
 
 **5 minute read**
 
-After years of investigation, the Department of Justice released [a redacted copy of the Muller Report](https://www.cnn.com/2019/04/18/politics/full-mueller-report-pdf/index.html) on Thursday April 18, 2019. The report weighs in at a hefty 448 pages, and covers everything from Russian interference in 2016 presidential election, to the private testimony of Michael Cohen, and whether or not President Trump may have obstructed justice.    
+After years of investigation, the Department of Justice released [a redacted copy of the Mueller Report](https://www.cnn.com/2019/04/18/politics/full-mueller-report-pdf/index.html) on Thursday April 18, 2019. The report weighs in at a hefty 448 pages, and covers everything from Russian interference in 2016 presidential election, to the private testimony of Michael Cohen, and whether or not President Trump may have obstructed justice.    
 
 I don't have all day to read this report, but I am interested to see what I can learn in a short afternoon by scraping the report and doing a cursory text and sentiment analysis.  
 
@@ -28,7 +28,7 @@ library(wordcloud)
 
 First, let's grab the raw text from the file, and replace line break characters `\r\n` with spaces.  
 ```{r}
-d <- pdf_text("C:/Users/rpauloo/Desktop/muller/mueller-report-searchable.pdf")
+d <- pdf_text("C:/Users/rpauloo/Desktop/mueller/mueller-report-searchable.pdf")
 d <- str_replace_all(d, "\r\n", " ")
 ```
 
@@ -55,7 +55,7 @@ df <- text_df %>%
   filter(!str_detect(word, "[:digit:]"))
 ```
 
-Now, I join sentiment scores (either positive or negative) for every word in the doc, using the sentiment lexicon from [Bing Liu and collaborators](https://www.cs.uic.edu/~liub/FBS/sentiment-analysis.html), calculate the number of positive and negative words on each page, and normalize this score across the document. I had to remove the string "trump" because it's used so much in the document, and actually classifies as a positive word, which is misleading. As expected given the nature of the investigation, the Muller report is a pretty negative document.  
+Now, I join sentiment scores (either positive or negative) for every word in the doc, using the sentiment lexicon from [Bing Liu and collaborators](https://www.cs.uic.edu/~liub/FBS/sentiment-analysis.html), calculate the number of positive and negative words on each page, and normalize this score across the document. I had to remove the string "trump" because it's used so much in the document, and actually classifies as a positive word, which is misleading. As expected given the nature of the investigation, the Mueller report is a pretty negative document.  
 
 ```{r, message=FALSE} 
 p <- df %>%
@@ -70,7 +70,7 @@ p <- df %>%
 p %>% 
   ggplot(aes(page, sentiment, fill = dir)) +
   geom_col() +
-  labs(title    = "The Muller Report is generally negative",
+  labs(title    = "The Mueller Report is generally negative",
        subtitle = "Relative sentiment per page",
        x = "Page number", 
        y = "Normalized sentiment") +
