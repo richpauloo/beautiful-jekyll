@@ -23,20 +23,20 @@ description: Rich Pauloo's nerd blog and scientific research page.
 
 # List of links in the navigation bar
 navbar-links:
-  About: "pages/aboutme"
-  Research: "pages/research"
+  About: "aboutme"
+  Research: "research"
   Data Sci:
-    - Domestic Well Vulnerability: "pages/flexdash.html"
-    - CA Well Completion Reports: "pages/oswcr_1.html"
-    - Predicting Fatal Landslides: "pages/landslides.html"
-    - Statistical Significance Tests: "pages/stat.html" 
+    - Domestic Well Vulnerability: "flexdash.html"
+    - CA Well Completion Reports: "oswcr_1.html"
+    - Predicting Fatal Landslides: "landslides.html"
+    - Statistical Significance Tests: "stat.html" 
   Apps:
     - Groundwater Observatory: "http://ucwater.org/gw_obs/"
     - OSWCR Tool: "http://ucwater.org/oswcr/"
     - AbstR: "https://richpauloo.shinyapps.io/abstr/"
     - Tulare TDS: "https://richpauloo.shinyapps.io/tds_leaflet/"
     - Word Cloud Generator: "https://richpauloo.shinyapps.io/word_cloud_app/"
-  Resume: "pages/resume.html"
+  Resume: "resume.html"
     #- CV: "richpauloo.github.io/rap-rmarkdown-cv.pdf"
     #- Resume: 
 
