@@ -26,6 +26,7 @@ navbar-links:
   About: "aboutme"
   Research: "research"
   Data Sci:
+    - Learning: "learn"
     - Domestic Well Vulnerability: "flexdash.html"
     - CA Well Completion Reports: "oswcr_1.html"
     - Predicting Fatal Landslides: "landslides.html"
