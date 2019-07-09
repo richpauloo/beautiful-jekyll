@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Resources for Self-Learning
+title: Self-Learning Resources
 subtitle: 
 show-avatar: false
 ---
