@@ -26,11 +26,11 @@ navbar-links:
   About: "aboutme"
   Research: "research"
   Data Sci:
-    - Learning: "learn"
     - Domestic Well Vulnerability: "flexdash.html"
     - CA Well Completion Reports: "oswcr_1.html"
     - Predicting Fatal Landslides: "landslides.html"
     - Statistical Significance Tests: "stat.html" 
+    - Learning: "learn"
   Apps:
     - Groundwater Observatory: "http://ucwater.org/gw_obs/"
     - OSWCR Tool: "http://ucwater.org/oswcr/"
