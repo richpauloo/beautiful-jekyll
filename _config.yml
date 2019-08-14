@@ -31,6 +31,7 @@ navbar-links:
     - Predicting Fatal Landslides: "landslides.html"
     - Statistical Significance Tests: "stat.html" 
     - Learning: "learn"
+    - CCR: "ccr_0110005.html"
   Apps:
     - Groundwater Observatory: "http://ucwater.org/gw_obs/"
     - OSWCR Tool: "http://ucwater.org/oswcr/"
