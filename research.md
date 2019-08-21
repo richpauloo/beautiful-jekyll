@@ -1,13 +1,11 @@
 ---
 layout: page
 title: Research
-subtitle: a gallery of intellectual art projects
+subtitle: 
 show-avatar: false
 ---
 
-I'm a physical scientist at heart, and a computational hydrogeogeologist by practice. My comfort zone is a blend of quantitative analysis, end-to-end data science, and the visualization and communication of large and complex datasets, often with spatial and temporal components. I use a variety of techniques, from finite element and finite difference numerical models to simulate 3D physical hydrologic systems of groundwater flow and contaminant transport in aquifers, to spatially-explicit machine learning and geostastical models that predict well vulnerability to drought.  
-
-My research at UC Davis primarily investigates groundwater quantity and quality. Global groundwater reserves are the largest store of freshwater resources not locked in frozen ice caps, glaciers, and continental ice sheets.[^fn1] Around the world, groundwater storage is in critical decline [^fn2] [^fn3], and groundwater quality faces equal if not more severe threats [^fn4] [^fn5] [^fn6].  
+I investigate groundwater quantity and quality. Global groundwater reserves are the largest store of freshwater resources not locked in frozen ice caps, glaciers, and continental ice sheets.[^fn1] Around the world, groundwater storage is in critical decline [^fn2] [^fn3], and groundwater quality faces equal if not more severe threats [^fn4] [^fn5] [^fn6].  
 
 The motivation of my present research is to ensure that future generations have access to clean and abundant groundwater resources.  
 
@@ -28,7 +26,8 @@ Questions:
 *click on the picture to view the project*  
 
 ***
-## Regional-Scale Groundwater Quality Management Modeling in Closed Hydrologic Basins
+## Anthropogenic Basin Closure and Groundwater Salinization: An Unrecognized Threat to Water Quality Sustainability
+
 Across the word, closed hydrologic basins form when basin outflow exceeds inflow and predominantly exits via evapotranspiration, leading to a subsequent accumulation of dissolved solids, and a decline in groundwater quality. Examples include the Dead Sea (Israel/Joran), the Great Salt Lake (Utah, USA), and Mono Lake (California, USA). Groundwater pumping and irrigation in agriculturally intensive regions of the world is closing basins, with unexplored consequences on groundwater quality and the energy required to halt or desalinate these resources. This research examines regional groundwater quality decline due to closed basin salinization in the Tulare Basin of California's Central Valley. 
 
 Question:
@@ -36,12 +35,14 @@ Question:
 
 [![groundwater salinization conceptual model](img/gw_sal.png)](https://github.com/richpauloo/Monte-Carlo-Mixing-Model)
 
+*(A) Open basin, pre-groundwater development: surface and groundwater systems connect. Groundwater discharges dissolved solids into surface water which exit the basin. Groundwater at this stage is predominantly fresh (e.g., < 1,000 mg/L). (B) Partial basin closure: groundwater pumping causes reduction or elimination of baseflow to streams. Pumped groundwater returns to the basin via irrigation return flow. Dissolved solids begin to accumulate in shallow groundwater. (C) Closed basin: falling groundwater levels cause subsurface inflow to drain adjacent basins. Streams lose to groundwater. Water primarily exits via evapotranspiration (ET), which further concentrates dissolved solids in groundwater. Salts migrate into the deeper aquifer.*
+
 ***
-## Upscaling the Advection Dispersion Equation
+## Regional Groundwater Quality Management Models
 
-Nonpoint-source groundwater contamination threatens to gradually degrade the quality of vast quantities of groundwater on time scales of decades to centuries in many parts of the world. Hydrogeophysical models of fluid flow in porous media (aquifers), and the equations to solve contaminant transport problems were initially developed for field-scale point-source pollutants. Emerging contaminants of concern from agricultural nutrient management and closed basin salinization threaten the sustainability of regional-scale groundwater resources, and demand currently unavailable physical models of contaminant transport.   
+Nonpoint-source groundwater contamination threatens to gradually degrade the quality of vast quantities of groundwater on time scales of decades to centuries in many parts of the world. Hydrogeophysical models of fluid flow in porous media (aquifers), and the equations to solve contaminant transport problems were initially developed for field-scale point-source pollutants, and are computationally expensive to solve at regional scales. Emerging contaminants of concern from agricultural nutrient management and closed basin salinization threaten the sustainability of regional-scale groundwater resources, and demand groundwater quality management models that currently do not exisit.   
 
-This research seeks to develop simplified upscaled numerical contaminant transport models that preserve 3D non-Fickian transport physics, for application towards modern regional-scale groundwater quality management.  
+Here, we develop simplified (upscaled) numerical contaminant transport models that preserve 3D non-Fickian transport physics, for application towards modern regional-scale groundwater quality management.  
 
 Core Question:
 
@@ -54,25 +55,13 @@ The developed methods will allow hypothesis testing into currently unresearched 
 ![A statistical model of geologic heterogeneity](img/upscale.png)  
 
 ***
-## Random Walk Particle Transport in Heterogeneous Media
 
-Effectively modeling groundwater quality requires an understanding of contaminant transport in heterogeneous proous media. I am especially drawn to visualizing particle paths as a way to understand transport behavior.
+Most of this research involves simulating 3D particle motion in heterogeneous porous media under different hydraulic gradients, which make for cool results:   
 
 [![contaminant transport](img/con_trans.png)](http://rpubs.com/richpauloo/rand_walk)  
 *click on the picture to explore some results*  
 
-***
-## Machine Learning & Groundwater Quality
-Can we predict groundwater quality (i.e. - TDS) from spatial layers (e.g. - land cover, land use, local geology, etc.)? What can machine learning approaches to groundwater quality reveal to us about the controls on groundwater quality?  
 
-![groundwater quality with depth](img/gw_qual.png)
-
-***
-## Groundwater Quality Mapping in California
-Total Dissolved Solids (TDS) are a measure of groundwater quality. However, these data are collected by various federal, state, local, nongovernmental, and private entities, often with different sampling protocol. This interactive map represents all publically available TDS data for the Tulare Basin in California's southern Central Valley.
- 
-[![groundwater quality shiny app](/img/tds_app.png)](https://richpauloo.shinyapps.io/tds_leaflet/)  
-*click on the picture to open the app*  
 
 
 
