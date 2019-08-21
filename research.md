@@ -33,7 +33,7 @@ Across the word, closed hydrologic basins form when basin outflow exceeds inflow
 Question:
 * What are the depths, timescales, and contaminant budgets of closed basin groundwater salinization?  
 
-[![groundwater salinization conceptual model](img/gw_sal.png)](https://github.com/richpauloo/Monte-Carlo-Mixing-Model)
+[![groundwater salinization conceptual model](/img/gw_sal.png)](https://github.com/richpauloo/Monte-Carlo-Mixing-Model)
 
 *(A) Open basin, pre-groundwater development: surface and groundwater systems connect. Groundwater discharges dissolved solids into surface water which exit the basin. Groundwater at this stage is predominantly fresh (e.g., < 1,000 mg/L). (B) Partial basin closure: groundwater pumping causes reduction or elimination of baseflow to streams. Pumped groundwater returns to the basin via irrigation return flow. Dissolved solids begin to accumulate in shallow groundwater. (C) Closed basin: falling groundwater levels cause subsurface inflow to drain adjacent basins. Streams lose to groundwater. Water primarily exits via evapotranspiration (ET), which further concentrates dissolved solids in groundwater. Salts migrate into the deeper aquifer.*
 
