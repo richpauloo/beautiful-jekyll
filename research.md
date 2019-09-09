@@ -14,13 +14,15 @@ I am grateful to my funding sources, without which the following projects would 
 * [Department of Energy - U.S./China Clean Energy Research Center for Water Energy Technologies (CERC-WET)](https://cerc-wet.berkeley.edu/)  
 
 ***
-## Predicting Domestic Well Vulnerability to Drought with Statistical & Machine Learning
-During the 2012-2016 drought, the state received more than 2,500 domestic well failure reports, the majority of which were in California's Central Valley [^fn7]. This left thousands of people without a reliable source of drinking water for months and, in some cases, years. Recent developments in California's Open and Transparent Water Data Platform (AB-1755) have made water data in California more transparent and available than ever before. In particular, well construction information, validation datasets of actual well failure, and groundwater level measurements are concurrently available, enabling the firstever regional-scale models of domestic well failure in California's Central Valley. This research utilizes big geospatial timeseries data to model domestic well failure, and machine learning models coupled with climate change predictors to predict future vulnerability to well failure.  
+## Domestic Well Vulnerability to Drought and Unsustainable Groundwater Management
 
-Questions:
-* Which domestic wells will be vulnerable in the next drought?  
-* Are disadvantaged households disproportionately affected by drought-vulnerable wells?  
-* Can machine learning identify characteristics of the vulnerable wells that will worsen with climate change?  
+During the severe 2012-2016 drought, more than 2,500 domestic wells ran dry in California, the majority of which (n = 2,027) were in California's Central Valley [^fn7]. This left thousands of people without a reliable source of drinking water for months and, in some cases, years. Recent developments in California's Open and Transparent Water Data Platform (AB-1755) have made water data in California more transparent and available than ever before, enabling the first ever regional aquifer scale models of domestic well failure. This research uses big geospatial timeseries data and machine learning to predict areas vulnerable to well failure in future droughts.  
+
+Questions:  
+
+* How do longer drought durations (i.e. - 4-8 years in length) impact well failure?  
+* How do different groundwater management regimes (i.e. - business as usual, sustainable management) impact well failure?  
+* Are disadvantaged areas disproportionately affected by well failure?  
  
 [![domestic well failure to ](/img/cawdc_dash.png)](https://richpauloo.github.io/flexdash.html)  
 *click on the picture to view the project*  
@@ -28,9 +30,10 @@ Questions:
 ***
 ## Anthropogenic Basin Closure and Groundwater Salinization: An Unrecognized Threat to Water Quality Sustainability
 
-Across the word, closed hydrologic basins form when basin outflow exceeds inflow and predominantly exits via evapotranspiration, leading to a subsequent accumulation of dissolved solids, and a decline in groundwater quality. Examples include the Dead Sea (Israel/Joran), the Great Salt Lake (Utah, USA), and Mono Lake (California, USA). Groundwater pumping and irrigation in agriculturally intensive regions of the world is closing basins, with unexplored consequences on groundwater quality and the energy required to halt or desalinate these resources. This research examines regional groundwater quality decline due to closed basin salinization in the Tulare Basin of California's Central Valley. 
+Across the word, closed hydrologic basins form when basin outflow exceeds inflow and predominantly exits via evapotranspiration, leading to a subsequent accumulation of dissolved solids, and a decline in groundwater quality. Examples include the Dead Sea (Israel/Joran), the Great Salt Lake (Utah, USA), and Mono Lake (California, USA). Although groundwater pumping and irrigation in an agriculturally intensive region may close a basin, the consequences on groundwater quality and the energy required to halt or desalinate these resources remains unexplored. This research examines regional groundwater quality decline due to closed basin salinization in the Tulare Basin of California's Central Valley.  
 
-Question:
+Question:  
+
 * What are the depths, timescales, and contaminant budgets of closed basin groundwater salinization?  
 
 [![groundwater salinization conceptual model](/img/gw_sal.png)](https://github.com/richpauloo/Monte-Carlo-Mixing-Model)
@@ -38,7 +41,8 @@ Question:
 *(A) Open basin, pre-groundwater development: surface and groundwater systems connect. Groundwater discharges dissolved solids into surface water which exit the basin. Groundwater at this stage is predominantly fresh (e.g., < 1,000 mg/L). (B) Partial basin closure: groundwater pumping causes reduction or elimination of baseflow to streams. Pumped groundwater returns to the basin via irrigation return flow. Dissolved solids begin to accumulate in shallow groundwater. (C) Closed basin: falling groundwater levels cause subsurface inflow to drain adjacent basins. Streams lose to groundwater. Water primarily exits via evapotranspiration (ET), which further concentrates dissolved solids in groundwater. Salts migrate into the deeper aquifer.*
 
 ***
-## Regional Groundwater Quality Management Models
+
+## Towards Regional Groundwater Quality Management Models
 
 Nonpoint-source groundwater contamination threatens to gradually degrade the quality of vast quantities of groundwater on time scales of decades to centuries in many parts of the world. Hydrogeophysical models of fluid flow in porous media (aquifers), and the equations to solve contaminant transport problems were initially developed for field-scale point-source pollutants, and are computationally expensive to solve at regional scales. Emerging contaminants of concern from agricultural nutrient management and closed basin salinization threaten the sustainability of regional-scale groundwater resources, and demand groundwater quality management models that currently do not exisit.   
 
@@ -49,8 +53,8 @@ Core Question:
 * Can non-Fickian contaminant transport effects produced by 3D heterogeneity be represented in 2D, and if so, what information is lost?  
 
 The developed methods will allow hypothesis testing into currently unresearched phenomena in groundwater resources modeling and management:
-* What effect will Managed Aquifer Recharge have on regional groundwater quality?  
-* Can groundwater salinization be mitigated, and if so under what timescales, at what cost, and by which specific practices?  
+
+* What impact will Managed Aquifer Recharge have on regional groundwater quality?  
 
 ![A statistical model of geologic heterogeneity](img/upscale.png)  
 
