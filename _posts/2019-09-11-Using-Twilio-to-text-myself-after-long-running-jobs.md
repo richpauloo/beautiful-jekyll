@@ -9,7 +9,7 @@ If only I could get a **text message** when the job was done. That would be cool
 So while my job was running (it still is)... I wrote this little script that I can stick in my `.RProfile` that loads a function `textme()`. The function has one purpose: text me at my phone number when my job is done running. Beauty.  
 
 
-![Victory!](img/ss.jpeg)  
+![Victory!](img/ss.jpg)  
 
 
 ## Here's the function
@@ -30,7 +30,7 @@ textme <- function(){
   # Now we can send away!
   twilio::tw_send_message(from = twilios_phone_number, 
                           to = my_phone_number, 
-                          body = "👋 The dark deed you have requested has been done.")
+                          body = "👋 Rejoice! The dark deed you have requested has been done. 🎉")
   
 }
 ```
@@ -47,4 +47,7 @@ Now if start a fresh RStudio session, all you need to do is add `textme()` to th
 
 Since my job is STILL running, I'm going to go for a walk and breathe some fresh air -- but not before asking my computer to alert me once it's done working.  
 
-Many thanks to the makers of RStudio, the {twilio} package, 
+***  
+
+
+Many thanks to the makers of RStudio, Sean Kross for the awesome [{twilio}](https://github.com/seankross/twilio) package, and computers who do our bidding everywhere.   
