@@ -9,7 +9,7 @@ If only I could get a **text message** when the job was done. That would be cool
 So while my job was running (it still is)... I wrote this little script that I can stick in my `.RProfile` that loads a function `textme()`. The function has one purpose: text me at my phone number when my job is done running. Beauty.  
 
 
-![Victory!](img/ss.jpg)  
+![Victory!](/img/ss.jpg)  
 
 
 ## Here's the function
