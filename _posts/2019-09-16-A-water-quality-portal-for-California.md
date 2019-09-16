@@ -1,6 +1,6 @@
 ## Summary
 
-** For those short on** ⏰:  
+**For those short on** ⏰:  
 
 When we travel somewhere new, checking the weather is simple. But checking the water quality is not.  
 
@@ -8,14 +8,14 @@ To make water quality data in California easy to access and understand, I built 
 
 🔗 [Learn about your water quality here.](caccr.github.io).  
 
-![California consumer confidence reports for public water quality data.](/img/example.gif)
+![California consumer confidence reports for public water quality data.](_posts/img/example.gif)
 
 
 ***  
 
 ## Challenge = Opportunity
 
-Present sources of water quality information (i.e. - consumer confidence reports) are fragmented across thousands of water utilities in the state, and lack consistency and clarity. These reports do not always effectively communicate water quality data, are only updated once per year, and vary in quality (here's an [example of one](/img/valverde2017.pdf), [another](/img/CCR2016CA0103041.pdf), [and another](/img/2017PierpointSpringsCCR-Cert)). Near-real-time, standardized, and easy to understand water quality reports would improve the public’s understanding of the water they buy and consume.  
+Present sources of water quality information (i.e. - consumer confidence reports) are fragmented across thousands of water utilities in the state, and lack consistency and clarity. These reports do not always effectively communicate water quality data, are only updated once per year, and vary in quality (here's an [example of one](_posts/img/valverde2017.pdf), [another](_posts/img/CCR2016CA0103041.pdf), [and another](_posts/img/2017PierpointSpringsCCR-Cert)). Near-real-time, standardized, and easy to understand water quality reports would improve the public’s understanding of the water they buy and consume.  
 
 Data isn’t available for all California water systems, notably “state smalls” which service between 5 and 15 connections. However, data availability is much better for community water systems (15 or more connections).   
 
@@ -40,11 +40,130 @@ I imagine that users will use this tool to learn more about water quality in the
 
 I turn on the tap every day to drink, shower, cook, and water the plants, generally taking for granted that clean water flows out. If I were to trace the water back through the pipe, I'd find a complex network of water utilities, treatment plants, and regulatory bodies all working together to acquire, treat, and deliver that water. This is one of the privileges of living in a wealthy country that’s easy to forget. If you asked me to tell you about the quality of the water coming out of my tap, about the different chemicals tested for and the levels detected, I wouldn't be able to. I might search the internet to search for this information, but I would find it difficult to find and make sense of.  
 
-Water in California is provided by a federated system of independent utilities. Some water agencies are so small that they slip through the cracks of state-mandated water quality testing, and others, like Metropolitan water district, are so large that they make up a majority of the water users in the state (see bubble chart below, [developed by Avery Kreuger]()). 
+Water in California is provided by a federated system of independent utilities. Some water agencies are so small that they slip through the cracks of state-mandated water quality testing, and others, like Metropolitan water district, are so large that they make up a majority of the water users in the state (see bubble chart below, created by [Avery Kreuger](https://twitter.com/averymkruger?lang=en).  
 
-<iframe src="https://richpauloo.github.io/avery/index.html"></iframe> 
+<meta charset="utf-8">
 
-Water quality sustainability is threatened by [political challenges](https://www.nytimes.com/2019/09/12/climate/trump-administration-rolls-back-clean-water-protections.html), [aging infrastructure(https://www.nytimes.com/2019/07/24/us/the-crisis-lurking-in-californians-taps-how-1000-water-systems-may-be-at-risk.html), and [historical contamination](https://www.nytimes.com/2018/03/26/lens/the-superfund-sites-of-silicon-valley.html), thus it is vital that citizens have a pulse on water quality data. 
+<!-- Load d3.js -->
+<script src="https://d3js.org/d3.v4.js"></script>
+
+<!-- Color palette -->
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+
+<!-- Create a div where the graph will take place -->
+<div id="my_dataviz"></div>
+
+<style>
+.node:hover{
+  stroke-width: 7px !important;
+  opacity: 1 !important;
+}
+</style>
+
+<script>
+// set the dimensions and margins of the graph
+var width = 1200
+var height = 600
+// append the svg object to the body of the page
+var svg = d3.select("#my_dataviz")
+  .append("svg")
+    .attr("width", width)
+    .attr("height", height)
+    //.attr("preserveAspectRatio", "xMinYMin meet")
+    //.attr("viewBox", "0 0 960 500")
+// Read data
+d3.csv("https://raw.githubusercontent.com/akrugercws/cdc2019/master/WSPops.csv", function(data) {
+  // Filter a bit the data -> more than 1 million inhabitants
+  data = data.filter(function(d){ return d.value>0 })
+  // Color palette for continents?
+  var color = d3.scaleOrdinal()
+    .domain(["ALAMEDA", "LOS ANGELES", "SAN FRANCISCO", "ORANGE", "SAN JOAQUIN", "ALPINE", 
+    "AMADOR", "BUTTE", "NA", "CALAVERAS", "COLUSA", "CONTRA COSTA", "DEL NORTE","EL DORADO","FRESNO","GLENN","HUMBOLDT","IMPERIAL","INYO","MADERA","MARIN","MARIPOSA","MENDOCINO","MERCED"])
+    .range(d3.schemeSet1);
+  // Size scale for countries
+  var size = d3.scaleLinear()
+    .domain([0, 100000])
+    .range([3,60])  // circle will be between 7 and 55 px wide
+  // create a tooltip
+  var Tooltip = d3.select("#my_dataviz")
+    .append("div")
+    .style("opacity", 0)
+    .attr("class", "tooltip")
+    .style("background-color", "white")
+    .style("border", "solid")
+    .style("border-width", "2px")
+    .style("border-radius", "5px")
+    .style("padding", "5px")
+  // Three function that change the tooltip when user hover / move / leave a cell
+  var mouseover = function(d) {
+    Tooltip
+      .style("opacity", 1)
+  }
+  var mousemove = function(d) {
+    Tooltip
+      .html('<b>' + d.name + '</b>' + "<br>" + d.county + " county" + "<br>" + (1*d.value).toLocaleString() + " inhabitants")
+      .style("left", (d3.mouse(this)[0]+20) + "px")
+      .style("top", (d3.mouse(this)[1]) + "px")
+  }
+  var mouseleave = function(d) {
+    Tooltip
+      .style("opacity", 0)
+  }
+  // Initialize the circle: all located at the center of the svg area
+  var node = svg.append("g")
+    .selectAll("circle")
+    .data(data)
+    .enter()
+    .append("circle")
+      .attr("class", "node")
+      .attr("r", function(d){ return Math.sqrt(size(d.value))})
+      .attr("cx", width / 2)
+      .attr("cy", height / 2)
+      .style("fill", function(d){ return color(d.county)})
+      .style("fill-opacity", 0.5)
+      .attr("stroke", "black")
+      .style("stroke-width", 1)
+      .on("mouseover", mouseover) // What to do when hovered
+      .on("mousemove", mousemove)
+      .on("mouseleave", mouseleave)
+      .call(d3.drag() // call specific function when circle is dragged
+           .on("start", dragstarted)
+           .on("drag", dragged)
+           .on("end", dragended));
+  // Features of the forces applied to the nodes:
+  var simulation = d3.forceSimulation()
+      .force("center", d3.forceCenter().x(width / 2).y(height / 2)) // Attraction to the center of the svg area
+      .force("charge", d3.forceManyBody().strength(.6)) // Nodes are attracted one each other of value is > 0
+      .force("collide", d3.forceCollide().strength(.2).radius(function(d){ return (Math.sqrt(size(d.value))+3) }).iterations(1)) // Force that avoids circle overlapping
+  // Apply these forces to the nodes and update their positions.
+  // Once the force algorithm is happy with positions ('alpha' value is low enough), simulations will stop.
+  simulation
+      .nodes(data)
+      .on("tick", function(d){
+        node
+            .attr("cx", function(d){ return d.x; })
+            .attr("cy", function(d){ return d.y; })
+      });
+  // What happens when a circle is dragged?
+  function dragstarted(d) {
+    if (!d3.event.active) simulation.alphaTarget(.03).restart();
+    d.fx = d.x;
+    d.fy = d.y;
+  }
+  function dragged(d) {
+    d.fx = d3.event.x;
+    d.fy = d3.event.y;
+  }
+  function dragended(d) {
+    if (!d3.event.active) simulation.alphaTarget(.03);
+    d.fx = null;
+    d.fy = null;
+  }
+})
+</script>
+
+
+Water quality sustainability is threatened by [political challenges](https://www.nytimes.com/2019/09/12/climate/trump-administration-rolls-back-clean-water-protections.html), [aging infrastructure](https://www.nytimes.com/2019/07/24/us/the-crisis-lurking-in-californians-taps-how-1000-water-systems-may-be-at-risk.html), and [historical contamination](https://www.nytimes.com/2018/03/26/lens/the-superfund-sites-of-silicon-valley.html), thus it is vital that citizens have a pulse on water quality data. 
 
 
 ***   
