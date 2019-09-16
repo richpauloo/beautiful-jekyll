@@ -33,7 +33,7 @@ navbar-links:
     - Learning: "learn"
     
   Apps:
-    - CCR: "caccr.github.io"
+    - CCR: "https://caccr.github.io"
     - Groundwater Observatory: "http://ucwater.org/gw_obs/"
     - OSWCR Tool: "http://ucwater.org/oswcr/"
     - AbstR: "https://richpauloo.shinyapps.io/abstr/"
