@@ -69,7 +69,7 @@ d3.csv("https://raw.githubusercontent.com/akrugercws/cdc2019/master/WSPops.csv",
   }
   var mousemove = function(d) {
     Tooltip
-      .html('<b>' + d.name + '</b>' + "<br>" + d.county + " county" + "<br>" + (1*d.value).toLocaleString() + " inhabitants")
+      .html('<b>' + d.name + '</b>' + "<br>" + d.county + " county" + "  |  " + (1*d.value).toLocaleString() + " inhabitants")
       .style("left", (d3.mouse(this)[0]+20) + "px")
       .style("top", (d3.mouse(this)[1]) + "px")
   }
