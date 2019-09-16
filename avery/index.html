@@ -22,7 +22,7 @@
 <script>
 
 // set the dimensions and margins of the graph
-var width = 1200
+var width = 700
 var height = 600
 
 
@@ -61,6 +61,8 @@ d3.csv("https://raw.githubusercontent.com/akrugercws/cdc2019/master/WSPops.csv",
     .style("border-width", "2px")
     .style("border-radius", "5px")
     .style("padding", "5px")
+    .style("position", "absolute") // floating tooltip
+    .style("z-index", "10")        // floating tooltip 
 
   // Three function that change the tooltip when user hover / move / leave a cell
   var mouseover = function(d) {
@@ -69,7 +71,7 @@ d3.csv("https://raw.githubusercontent.com/akrugercws/cdc2019/master/WSPops.csv",
   }
   var mousemove = function(d) {
     Tooltip
-      .html('<b>' + d.name + '</b>' + "<br>" + d.county + " county" + "<br>" + (1*d.value).toLocaleString() + " inhabitants")
+      .html('<b>' + d.name + '</b>' + "<br>" + d.county + " county" + "  |  " + (1*d.value).toLocaleString() + " inhabitants")
       .style("left", (d3.mouse(this)[0]+20) + "px")
       .style("top", (d3.mouse(this)[1]) + "px")
   }
@@ -135,3 +137,5 @@ d3.csv("https://raw.githubusercontent.com/akrugercws/cdc2019/master/WSPops.csv",
 })
 
 </script>
+
+<br><br>
