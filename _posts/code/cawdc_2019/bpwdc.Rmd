@@ -7,27 +7,27 @@ output: html_document
 
 **For those short on** ⏰:  
 
-When we travel somewhere new, checking the weather is simple. But checking the water quality is not.  
+Checking the weather for a given location is simple ⛅ ✅. Checking the water quality is not as easy 🚰 ❌.  
 
 To make water quality data in California easy to access and understand, I built a “weather app for water quality,” that enables users to easily check public drinking water quality in their hometown, place of work, school, and anywhere they may travel.  
 
-🔗 [Learn about your water quality here.](caccr.github.io).  
+🔗 [Learn about your water quality here.](https://caccr.github.io)  
 
 
-![](../img/example.gif)
+![](example.gif)
 
 
 ***  
 
 ## Challenge & Opportunity
 
-Present sources of water quality information (i.e. - consumer confidence reports) are fragmented across thousands of water utilities in the state, and lack consistency and clarity. These reports do not always effectively communicate water quality data, are only updated once per year, and vary in quality (here's an [example of one](../img/valverde2017.pdf), [another](../img/CCR2016CA0103041.pdf), [and another](../img/2017PierpointSpringsCCR-Cert)). Near-real-time, standardized, and easy to understand water quality reports would improve the public’s understanding of the water they buy and consume.  
+Present sources of water quality information (i.e. - consumer confidence reports) are fragmented across thousands of water utilities in the state, and lack consistency and clarity. These reports do not always effectively communicate water quality data, are only updated once per year, and vary in quality (here's an [example of one](https://github.com/richpauloo/richpauloo.github.io/raw/master/_posts/img/valverde2017.pdf), [another](https://github.com/richpauloo/richpauloo.github.io/raw/master/_posts/img/CCR2016CA0103041.pdf), [and another](https://github.com/richpauloo/richpauloo.github.io/raw/master/_posts/img/2017PierpointSpringsCCR-Cert.pdf)). Near-real-time, standardized, and easy to understand water quality reports would improve the public’s understanding of the water they buy and consume.  
 
 Data isn’t available for all California water systems, notably “state smalls” which service between 5 and 15 connections. However, data availability is much better for community water systems (15 or more connections).   
 
 This project aimed to build a “weather app” for California community water system water quality. The benefits of this approach include standardization, consistency across agencies, ease of use, and near-real-time water quality information.  
 
-🔗 [The project is visible here](caccr.github.io), and aggregates publicly available water quality data for all California community water systems to report: 
+🔗 [The project is visible here](https://caccr.github.io), and aggregates publicly available water quality data for all California community water systems to report: 
 
 * compliance status  
 * chemicals detected within the past 2 years  
@@ -66,7 +66,7 @@ About a decade ago, in 2010, the UN recognized [water as a human right](https://
 
 If the government is to play a key role in regulating water availability and quality, then policy is the answer. Policy is blind without supporting information, thus, open and transparent data is the most reasonable approach towards the goal of securing clean and accessible water. We need to measure the systems we manage, thus, we need open, accurate, and up-to-date information.
 
-Efforts to make previously-private data public domain are relatively new. In 2016, California legislators passed the [Open and transparent water data act](https://water.ca.gov/ab1755), the technical implementation of which can be found in [California's open data portal](data.ca.gov). It’s hard to emphasize just how significant of a shift this is. 
+Efforts to make previously-private data public domain are relatively new. In 2016, California legislators passed the [Open and transparent water data act](https://water.ca.gov/ab1755), the technical implementation of which can be found in [California's open data portal](https://data.ca.gov). It’s hard to emphasize just how significant of a shift this is. 
 
 Just 4 years ago, I started a PhD in hydrogeology at the University of California Davis, and found it nearly impossible to find publicly available water data. Water data was valuable, and hence, guarded. Private consulting firms collected, curated and sold services using those data. Why would a self-interested firm then release work that took them years to create, only to be stolen by another competing firm? Furthermore, to some, open data was synonymous with more regulation, so it was feared and opposed. For example, although [well construction data](https://data.ca.gov/dataset/well-completion-reports) has been collected for over 100 years by the state, it was only made public in 2017, enabling some of the first estimates of the [population served by private domestic wells](https://www.sciencebase.gov/catalog/item/58e25974e4b09da67996a6c6).  
 
