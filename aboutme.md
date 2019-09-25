@@ -15,7 +15,7 @@ I currently live in Davis, California, where I'm a PhD Candidate studying physic
 
 
 <p align="center">
-  <img width="640" src="/img/climb.JPG.png">
+  <img width="640" src="/img/climb.JPG">
 </p>
 
 <i>Enjoying the beautiful Sierra Nevada alpine environment.</i>
