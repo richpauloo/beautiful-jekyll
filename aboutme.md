@@ -15,14 +15,14 @@ I currently live in Davis, California, where I'm a PhD Candidate studying physic
 
 
 <p align="center">
-  <img width="640" src="/img/climb.JPG">
+  <img width="100%" src="/img/climb.JPG">
 </p>
 
 <i>Enjoying the beautiful Sierra Nevada alpine environment.</i>
 
 
 <p align="center">
-  <img width="640" src="/img/speak.jpg">
+  <img width="100%" src="/img/speak.jpg">
 </p>
 
 <i>Presenting at the 2019 Water Data Summit.</i>
