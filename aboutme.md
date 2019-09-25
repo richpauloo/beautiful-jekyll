@@ -14,18 +14,8 @@ I grew up in Southern California, and moved to the Bay Area to study Biology and
 I currently live in Davis, California, where I'm a PhD Candidate studying physical hydrology at the University of California Davis with my supervisor, Dr. Graham Fogg. I develop 3D numerical hydrodynamic flow and contaminant transport models to study regional-scale contaminant transport in heterogeneous aquifers. I create statistical and machine learning models to evaluate domestic well vulnerability to drought. And when I have free time, I enjoy building dashboards and expanding my knowledge of the enormous and expanding ecosystem of data tools available today. Outside of work, I love to try new recipes, travel, explore the alpine environment with a rope and harness, and get in the cold California ocean to catch waves.  
 
 
-<style type="text/css">
-	.rotate90 {
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
-}
-</style>
-
 <p align="center">
-  <img width="100%" src="/img/climb.JPG" class="rotate90">
+  <img width="100%" src="/img/climb.JPG">
 </p>
 
 <i>Enjoying the beautiful Sierra Nevada alpine environment.</i>
