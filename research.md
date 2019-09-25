@@ -6,24 +6,6 @@ show-avatar: false
 ---
 
 
-## Domestic Well Vulnerability to Drought and Unsustainable Groundwater Management
-
-[![domestic well failure to ](/img/cawdc_dash.png)](https://richpauloo.github.io/flexdash.html)   
-
-During the severe 2012-2016 drought, more than 2,500 domestic wells ran dry in California, the majority of which (n = 2,027) were in California's Central Valley [^fn1]. This left thousands of people without a reliable source of drinking water for months and, in some cases, years. Recent developments in California's Open and Transparent Water Data Platform (AB-1755) have made water data in California more available than ever before, enabling the first ever regional aquifer scale models of domestic well failure.  
-
-Questions:  
-
-* How do longer drought durations (i.e. - 4-8 years in length) impact well failure?  
-* How do different groundwater management regimes (i.e. - business as usual, glide path, sustainable management) impact well failure?  
-
-Paper: *submitted*  
-
-**Pauloo, R.** & Escriva-Bou, A. & Dahlke, H. & Fencl, A. & Guillon H. & Fogg, G.E. (2019). “Domestic Well Vulnerability to Drought Duration and Unsustainable Groundwater Management in California’s Central Valley.”  
-
-
-
-***
 ## Anthropogenic Basin Closure and Groundwater Salinization: An Unrecognized Threat to Water Quality Sustainability
 
 [![groundwater salinization conceptual model](/img/gw_sal.png)](https://github.com/richpauloo/Monte-Carlo-Mixing-Model)
@@ -41,6 +23,25 @@ Question:
 Paper: *in preparation*  
 
 **Pauloo, R.** & Fogg, G.E. & Harter, T. & Guo, Z. (2019). “Anthropogenic Basin Closure and Groundwater Salinization: An Unrecognized Threat to Water Quality Sustainability.”  
+
+
+
+***
+
+## Domestic Well Vulnerability to Drought and Unsustainable Groundwater Management
+
+[![domestic well failure to ](/img/cawdc_dash.png)](https://richpauloo.github.io/flexdash.html)   
+
+During the severe 2012-2016 drought, more than 2,500 domestic wells ran dry in California, the majority of which (n = 2,027) were in California's Central Valley [^fn1]. This left thousands of people without a reliable source of drinking water for months and, in some cases, years. Recent developments in California's Open and Transparent Water Data Platform (AB-1755) have made water data in California more available than ever before, enabling the first ever regional aquifer scale models of domestic well failure.  
+
+Questions:  
+
+* How do longer drought durations (i.e. - 4-8 years in length) impact well failure?  
+* How do different groundwater management regimes (i.e. - business as usual, glide path, sustainable management) impact well failure?  
+
+Paper: *submitted*  
+
+**Pauloo, R.** & Escriva-Bou, A. & Dahlke, H. & Fencl, A. & Guillon H. & Fogg, G.E. (2019). “Domestic Well Vulnerability to Drought Duration and Unsustainable Groundwater Management in California’s Central Valley.”  
 
 
 
