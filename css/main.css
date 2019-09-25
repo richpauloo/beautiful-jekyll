@@ -66,14 +66,14 @@ hr.small {
 }
 
 ::-moz-selection {
-  color: white;
+  color: black;
   text-shadow: none;
-  background-color: {{ site.hover-col }};
+  background-color: #a8d1ff;
 }
 ::selection {
-  color: white;
+  color: black;
   text-shadow: none;
-  background-color: {{ site.hover-col }};
+  background-color: #a8d1ff;
 }
 img::selection {
   color: white;

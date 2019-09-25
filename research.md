@@ -28,6 +28,8 @@ Paper: *submitted*
 
 [![groundwater salinization conceptual model](/img/gw_sal.png)](https://github.com/richpauloo/Monte-Carlo-Mixing-Model)
 
+<iframe width="100%" src="https://www.youtube.com/embed/FesGid9Qrwg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 Across the word, closed hydrologic basins form when basin outflow exceeds inflow and predominantly exits via evapotranspiration, leading to a subsequent accumulation of dissolved solids, and a decline in groundwater quality. We demonstrate that groundwater pumping and irrigation (particularly in an agriculturally intensive region) may close a basin, and explore the long-term (decades to centuries) groundwater quality consequences of this process, focusing on the Tulare Basin in California.  
 
 Question:  
