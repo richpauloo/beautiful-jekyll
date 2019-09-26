@@ -25,7 +25,8 @@ description: Rich Pauloo's nerd blog and scientific research page.
 navbar-links:
   About: "aboutme"
   Research: "research"
-  Data Sci:
+  Projects:
+    - textme: "https://github.com/richpauloo/textme"
     - Domestic Well Vulnerability: "flexdash.html"
     - CA Well Completion Reports: "oswcr_1.html"
     - Predicting Fatal Landslides: "landslides.html"
