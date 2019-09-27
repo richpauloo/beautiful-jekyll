@@ -1,3 +1,6 @@
+// All credit for this goes to Matt DesLauriers @mattdesl
+// https://shop.mattdesl.com/
+
 let dragging = false;
 let minFrequency = 0.5;
 let maxFrequency = 2;
