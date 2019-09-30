@@ -1,0 +1,1 @@
+`bp.Rmd` is archived. see richpauloo.github.io/posts/_____.md for the up-tp-date file.

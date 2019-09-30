@@ -1,0 +1,390 @@
+Identification_Information:
+  Citation:
+    Citation_Information:
+      Originator: USGS National Center for EROS 
+      Publication_Date: 200509
+      Title: 
+        Grayscale Conterminous United States Shaded Relief – 200-Meter 
+        Resolution
+      Geospatial_Data_Presentation_Form: Map
+      Publication_Information:
+        Publication_Place: Reston, VA
+        Publisher: National Atlas of the United States
+      Online_Linkage: <http://nationalatlas.gov/atlasftp.html>
+  Description:
+    Abstract:
+      The grayscale conterminous United States shaded relief data were derived 
+      from National Elevation Dataset (NED) data, and show the terrain of the 
+      conterminous United States at a resolution of 200 meters.  The NED is a
+      raster product assembled by the U.S. Geological Survey, designed to 
+      provide national elevation data in a seamless form with a consistent 
+      datum, elevation unit, and projection.  Data corrections made in the 
+      NED assembly process minimize artifacts, permit edge matching, and fill 
+      sliver areas of missing data.  
+    Purpose:
+      The grayscale shaded relief images were developed to portray the terrain 
+      of the United States.  They are intended for visual purposes only.  The 
+      original NED data must be used for conducting analysis and determining 
+      elevation values.
+    Supplemental_Information:
+      The associated world file is included as part of the GeoTIFF.  The 
+      contents of the world file are:
+      >200.0000
+      >0.000000
+      >0.000000
+      >-200.0000
+      >-2262900.0000
+      >1038900.0000
+
+      For the convenience of Arc/INFO users, the GeoTIFF image also has a text 
+      file of the image description that includes map projection and datum 
+      information in a readable format, so data may be easily ingested back into 
+      Arc/INFO Grid. This ancillary file is available on request.
+  Time_Period_of_Content:
+    Time_Period_Information:
+      Single_Date/Time:
+        Calendar_Date: 200209
+    Currentness_Reference: Date of elevation data download
+  Status:
+    Progress: Complete
+    Maintenance_and_Update_Frequency: None planned
+  Spatial_Domain:
+    Bounding_Coordinates:
+      West_Bounding_Coordinate: -133
+      East_Bounding_Coordinate: -59
+      North_Bounding_Coordinate: 51
+      South_Bounding_Coordinate: 19
+  Keywords:
+    Theme:
+      Theme_Keyword_Thesaurus: ISO 19115 Topic Category
+      Theme_Keyword: Elevation
+      Theme_Keyword: Imagery/Base Maps/Earth Cover
+    Theme:
+      Theme_Keyword_Thesaurus: None
+      Theme_Keyword: Digital Elevation Model
+      Theme_Keyword: Shaded Relief
+      Theme_Keyword: Topography
+      Theme_Keyword: Topographic
+      Theme_Keyword: DEM
+      Theme_Keyword: NED
+    Place:
+      Place_Keyword_Thesaurus: None
+      Place_Keyword: United States
+      Place_Keyword: Alabama
+      Place_Keyword: Arizona
+      Place_Keyword: Arkansas
+      Place_Keyword: California
+      Place_Keyword: Colorado
+      Place_Keyword: Connecticut
+      Place_Keyword: Delaware
+      Place_Keyword: District of Columbia
+      Place_Keyword: Florida
+      Place_Keyword: Georgia
+      Place_Keyword: Idaho
+      Place_Keyword: Illinois
+      Place_Keyword: Indiana
+      Place_Keyword: Iowa
+      Place_Keyword: Kansas
+      Place_Keyword: Kentucky
+      Place_Keyword: Louisiana
+      Place_Keyword: Maine
+      Place_Keyword: Maryland
+      Place_Keyword: Massachusetts
+      Place_Keyword: Michigan
+      Place_Keyword: Minnesota
+      Place_Keyword: Mississippi
+      Place_Keyword: Missouri
+      Place_Keyword: Montana
+      Place_Keyword: Nebraska
+      Place_Keyword: Nevada
+      Place_Keyword: New Hampshire
+      Place_Keyword: New Jersey
+      Place_Keyword: New Mexico
+      Place_Keyword: New York
+      Place_Keyword: North Carolina
+      Place_Keyword: North Dakota
+      Place_Keyword: Ohio
+      Place_Keyword: Oklahoma
+      Place_Keyword: Oregon
+      Place_Keyword: Pennsylvania
+      Place_Keyword: Rhode Island
+      Place_Keyword: South Carolina
+      Place_Keyword: South Dakota
+      Place_Keyword: Tennessee
+      Place_Keyword: Texas
+      Place_Keyword: Utah
+      Place_Keyword: Vermont
+      Place_Keyword: Virginia
+      Place_Keyword: Washington
+      Place_Keyword: West Virginia
+      Place_Keyword: Wisconsin
+      Place_Keyword: Wyoming
+  Access_Constraints: None.
+  Use_Constraints:
+    None.  Acknowledgment of the U.S. Geological Survey, National Center for 
+    EROS and (or) the National Atlas of the United States would be appreciated 
+    in products derived from these data.
+  Point_of_Contact:
+    Contact_Information:
+      Contact_Person_Primary:
+        Contact_Person: John Hutchinson
+        Contact_Organization: SAIC
+      Contact_Address:
+        Address_Type: Mailing address
+        Address: USGS National Center for EROS 
+        City: Sioux Falls
+        State_or_Province: SD
+        Postal_Code: 57198-0001
+        Country: USA
+      Contact_Voice_Telephone: 605-594-6049
+      Contact_Electronic_Mail_Address: hutch@usgs.gov
+  Native_Data_Set_Environment: 
+    1-band TIFF format created using Arc/INFO 8.3 and then processed through 
+    custom software to create the GeoTIFF format.
+  Cross_Reference:
+    Citation_Information:
+      Originator: National Atlas of the United States
+      Publication_Date: 200509
+      Title: Grayscale Alaska Shaded Relief – 200-Meter Resolution
+      Publication_Information:
+        Publication_Place: Reston, VA
+        Publisher: National Atlas of the United States
+      Online_Linkage: <http://nationalatlas.gov/atlasftp.html>
+  Cross_Reference:
+    Citation_Information:
+      Originator: National Atlas of the United States
+      Publication_Date: 200509
+      Title: Grayscale Hawaii Shaded Relief – 200-Meter Resolution
+      Publication_Information:
+        Publication_Place: Reston, VA
+        Publisher: National Atlas of the United States
+      Online_Linkage: <http://nationalatlas.gov/atlasftp.html>
+  Cross_Reference:
+    Citation_Information:
+      Originator: National Atlas of the United States
+      Publication_Date: 200509
+      Title: 
+        Grayscale Puerto Rico and the U.S. Virgin Islands Shaded Relief – 200-
+        Meter Resolution
+      Publication_Information:
+        Publication_Place: Reston, VA
+        Publisher: National Atlas of the United States
+      Online_Linkage: <http://nationalatlas.gov/atlasftp.html>
+
+Data_Quality_Information:
+  Logical_Consistency_Report:
+    No tests for logical consistency have been performed on this map layer.
+  Completeness_Report:
+    Data completeness reflects the content of the original NED elevation data.
+  Lineage:
+    Source_Information: 
+      Source_Citation: 
+        Citation_Information: 
+          Originator: U.S. Geological Survey 
+          Publication_Date: 2002
+          Title: National Elevation Dataset 
+          Edition: 1 
+          Publication_Information: 
+            Publication_Place: Sioux Falls, SD 
+            Publisher: U.S. Geological Survey 
+          Online_Linkage: <http://ned.usgs.gov/>
+      Type_of_Source_Media: Online 
+      Source_Time_Period_of_Content: 
+        Time_Period_Information: 
+          Single_Date/Time: 
+            Calendar_Date: 2002 
+        Source_Currentness_Reference: Date of elevation data download. 
+      Source_Citation_Abbreviation: National Elevation Dataset 
+      Source_Contribution: Elevation information. 
+
+    Source_Information:
+      Source_Citation:
+        Citation_Information:
+          Originator: National Atlas of the United States
+          Publication_Date: 1999
+          Title: Shoreline file in Lambert Azimuthal Equal Area projection
+          Publication_Information:
+            Publication_Place: Reston, VA
+            Publisher: National Atlas of the United States
+      Type_of_Source_Media: Internal file
+      Source_Time_Period_of_Content:
+        Time_Period_Information:
+          Range_of_Dates/Times:
+            Beginning_Date: 1972
+            Ending_Date: 1999
+        Source_Currentness_Reference: Ground condition
+      Source_Citation_Abbreviation: shorelp020l
+      Source_Contribution: Shoreline mask for area of coverage.
+
+    Process_Step:
+      Process_Description:
+        Four elevation mosaics were extracted from the National Elevation 
+        Dataset (NED) and used to produce the shaded relief images of the 
+        conterminous United States, Alaska, Hawaii, and Puerto Rico and the U.S. 
+        Virgin Islands.  A separate image was created for each of the four 
+        areas because, at 200-meter resolution, file size for an elevation 
+        mosaic of all of the United States would exceed the processing capacity 
+        of some commonly-used GIS and image processing software packages.
+
+        For the conterminous United States, elevation data were extracted from 
+        the NED and projected to a Lambert Azimuthal Equal-Area (LAZ) projection 
+        centered on 100 degrees West, 45 degrees North, with a pixel size of 200 
+        meters.  The datum for NED data is NAD83, except for Alaska which uses 
+        NAD27.  Because there is no ellipsoidal form of the Lambert Azimuthal 
+        Equal-Area projection, once data have been projected to LAZ they lose 
+        any datum affiliation and instead are based on a sphere with a radius of 
+        6370997 meters.  However, some commonly-used software packages will 
+        report an error if a datum is not specified, so to accommodate such 
+        software, the GeoTIFF for this shaded-relief map layer retains the NAD83 
+        datum associated with the original NED data from which it was derived.
+
+        Using the Arc/INFO Polygrid command, a 0/1 land/water mask was created 
+        for the conterminous United States at the same 200 meter resolution as 
+        the elevation data, using coastline data clipped from the National Atlas 
+        shoreline file.  The land/water mask was applied to the 16-bit elevation 
+        grid.  The masked elevation grid as well as the mask itself is available 
+        on request.  More information on the NED may be found by following the 
+        links at <http://ned.usgs.gov>. 
+
+        Shaded relief was created from the masked land/water elevation data set 
+        using the Arc/INFO Hillshade command with these 
+        parameters:
+        >Azimuth 315 degrees
+        >Sun angle 45 degrees
+        >Vertical exaggeration factor 10
+
+        A second mask that separated U.S. land from non-U.S. land was created 
+        with Arc/INFO Polygrid, then applied to the shaded relief image in 
+        Adobe Photoshop.  
+
+        To set colors for oceans and non-U.S. lands, the grayscale shaded relief 
+        image was first converted to index color in Photoshop.  Pixel value 255 
+        was already reserved for water pixels, and so index 255 was set to rgb 
+        value (132, 193, 255), the blue color for oceans used in the National 
+        Atlas online Map Maker.  There was no pixel value reserved for non-U.S. 
+        land, so pixel value 254 was arbitrarily chosen for this class.  
+        Existing pixels with a value of 254 were remapped to 253 in Photoshop, 
+        causing a negligible loss of contrast.  Non-U.S. lands were set to 
+        pixel value 254 by selecting them with the previously created mask, then 
+        index 254 was set to rgb value (132, 158, 172), the gray color used for 
+        non-U.S. land in the National Atlas online Map Maker. 
+
+        Masked images from Photoshop were saved as TIFF's, then ingested into 
+        Arc/INFO's Grid module, saved as TIFF's from Arc/INFO, and then 
+        processed through a USGS GeoTIFF software program to create fully-
+        compliant GeoTIFFs with valid header information. 
+      Source_Used_Citation_Abbreviation: National Elevation Dataset
+      Source_Used_Citation_Abbreviation: shorelp020l
+      Process_Date: 200506
+
+Spatial_Data_Organization_Information:
+  Direct_Spatial_Reference_Method: Raster
+  Raster_Object_Information:
+    Raster_Object_Type: Grid Cell
+    Row_Count: 17280
+    Column_Count: 25740
+Spatial_Reference_Information:
+  Horizontal_Coordinate_System_Definition:
+    Planar:
+      Map_Projection:
+        Map_Projection_Name: Lambert Azimuthal Equal Area
+        Lambert_Azimuthal_Equal_Area:
+          Longitude_of_Projection_Center: -100.00
+          Latitude_of_Projection_Center: 45.00
+          False_Easting: 0.0
+          False_Northing: 0.0
+      Planar_Coordinate_Information:
+        Planar_Coordinate_Encoding_Method: Row and column
+        Coordinate_Representation:
+          Abscissa_Resolution: 200.0
+          Ordinate_Resolution: 200.0
+        Planar_Distance_Units: Meters
+    Geodetic_Model:
+      Horizontal_Datum_Name: None
+      Ellipsoid_Name: Sphere
+      Semi-major_Axis: 6370997.0
+      Denominator_of_Flattening_Ratio: 1.0
+
+Entity_and_Attribute_Information:
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: Shaded relief TIFF image grid cell
+      Entity_Type_Definition: 
+        Any of the data elements in the shaded relief file.
+      Entity_Type_Definition_Source: National Atlas of the United States
+    Attribute:
+      Attribute_Label: Shaded relief TIFF image values
+      Attribute_Definition: Index color values for the TIFF image.
+      Attribute_Definition_Source: National Atlas of the United States
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: 0
+          Range_Domain_Maximum: 255
+
+Distribution_Information:
+  Distributor:
+    Contact_Information:
+      Contact_Organization_Primary:
+        Contact_Organization: 
+          Earth Science Information Center, U.S. Geological Survey
+      Contact_Address:
+        Address_Type: Mailing address
+        Address: 507 National Center
+        City: Reston
+        State_or_Province: VA
+        Postal_Code: 20192
+        Country: USA
+      Contact_Voice_Telephone: 1-888-ASK-USGS (1-888-275-8747)
+      Contact_Voice_Telephone: 703-648-5920
+      Contact_Instructions:
+        In addition to the address above there are other ESIC offices 
+        throughout the country.  A full list of these offices is at
+        <http://geography.usgs.gov/esic/esic_index.html>.
+  Distribution_Liability:
+    Although these data have been processed successfully on a computer system 
+    at the U.S. Geological Survey, National Center for EROS, no warranty 
+    expressed or implied is made by the U.S. Geological Survey regarding the 
+    utility of the data on any other system, nor shall the act of distribution 
+    constitute any such warranty.  Use of trademarks or formats does not 
+    constitute endorsement by the U.S. Geological Survey.  There are no 
+    copyright restrictions on the use, redistribution, or further processing of 
+    this map layer.  No responsibility is assumed by the U.S. Geological Survey 
+    in the use of these data.
+  Standard_Order_Process:
+    Digital_Form:
+      Digital_Transfer_Information:
+        Format_Name: TIFF
+      Digital_Transfer_Option:
+        Online_Option:
+          Computer_Contact_Information:
+            Network_Address:
+              Network_Resource_Name:
+                <http://nationalatlas.gov/atlasftp.html>
+    Fees:
+      There is no charge for the map layer.  
+    
+Metadata_Reference_Information:
+  Metadata_Date: 20050809
+  Metadata_Contact:
+    Contact_Information:
+      Contact_Person_Primary:
+        Contact_Person: Peg Rawson
+        Contact_Organization: National Atlas of the United States
+      Contact_Address:
+        Address_Type: Mailing address
+        Address: 12201 Sunrise Valley Drive
+        Address: MS-561 
+        City: Reston
+        State_or_Province: VA
+        Postal_Code: 20192
+        Country: USA
+      Contact_Voice_Telephone: 703-648-4183
+      Contact_Electronic_Mail_Address: atlasmail@usgs.gov
+  Metadata_Standard_Name: 
+    FGDC Content Standards for Digital Geospatial Metadata
+  Metadata_Standard_Version: FGDC-STD-001-1998
+  Metadata_Security_Information:
+    Metadata_Security_Classification_System: None
+    Metadata_Security_Classification: Unclassified
+    Metadata_Security_Handling_Description: None
+
