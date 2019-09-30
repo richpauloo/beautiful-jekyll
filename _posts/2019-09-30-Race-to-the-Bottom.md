@@ -1,9 +1,10 @@
 ## The Incredible Surge of Groundwater Extraction in California
 
-**In California, groundwater extraction for agriculture has boomed over the past 75 years, and the average well drilled today has more than doubled in depth compared to wells drilled in 1940, according to Department of Water Resources data.**
-
 <center>
-    <img src="/img/d15_gb.gif" alt="Agricultural groundwater wells surge during drought" width="100%"/>
+**In California, groundwater extraction for agriculture has boomed over the past 75 years, and the average well drilled today has more than doubled in depth compared to wells drilled in 1940, according to Department of Water Resources data.**  
+
+<img src="/img/d15_gb.gif" alt="Agricultural groundwater wells surge during drought" width="100%"/> 
+
 </center>
 
 
@@ -33,10 +34,11 @@ To understand the consequences of this long lead-in to SGMA, we first need to un
 
 # Agricultural well drilling peaks during drought
 
-**More agricultural wells are drilled during droughts in California, when surface water is scarce, and demand for groundwater skyrockets.**
+<center>
+**More agricultural wells are drilled during droughts in California, when surface water is scarce, and demand for groundwater skyrockets.**  
 
-![](/img/p1.png)
-_USUS Source for droughts and dry years [^3]._
+![](/img/p1.png)  
+</center>
 
 Whenever a well of any type (e.g. - agricultural, public, domestic, remediation, monitoring) is drilled in California, a well completion report is filed with the state documenting its location, depth, use, and other characteristics [^4]. These data were mined to observe the number of agricultural wells drilled per year, shown above.  
 
@@ -50,9 +52,11 @@ Anecdotally, demand for well drillers during the last 2012-2016 drought was so g
 
 # Agricultural wells are being drilled deeper
 
+<center>
 **The average agricultural well today is twice as deep as it was in 1940.**
 
 ![](/img/p2.png)
+</center>
 
 In California's Central Valley, the hotspot of groundwater extraction, some fear that the 20 year implementation of SGMA creates a regulatory vacuum that some landowners will exploit until apprehended.  
 
@@ -68,9 +72,10 @@ Data from well completion reports in California confirms that agricultural wells
 
 ## Groundwater depletion in California is part of a larger, worldwide trend 
 
+<center>
 **Groundwater extraction in the Middle East, India, Pakistan, China, and Mexico has reached alarming rates, and poses similar sustainability issues to those faced in California today.**
 
-<center>
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/p8PsXPnnYuw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </center>
 
