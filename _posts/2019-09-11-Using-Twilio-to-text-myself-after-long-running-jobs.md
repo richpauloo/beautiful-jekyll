@@ -16,7 +16,7 @@ So while my job was running (it still is)... I wrote this little script that I c
 
 You'll need to sign up for a free [Twilio account](https://www.twilio.com/).  
 
-```
+```r
 textme <- function(){
   
   # First you need to set up your accound SID and token as environmental variables
@@ -37,7 +37,7 @@ textme <- function(){
 
 Edit your `.Rprofile`, paste the function above, and save.  
 
-```
+```r
 if(!file.exists("~/.Rprofile")) # only create if not already there
     file.create("~/.Rprofile")    # (don't overwrite it)
 file.edit("~/.Rprofile")
