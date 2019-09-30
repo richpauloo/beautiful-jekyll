@@ -28,7 +28,7 @@ To address these issues, in 2014, California passed the **Sustainable Groundwate
 > 
 > -Adam Keats, Environmental Attorney at the Center for Food Safety
 
-To understand the consequences of this long lead-in to SGMA, we first need to understand the relationship between groundwater use and drought.  
+To understand the consequences of this long lead-in to SGMA, we first need to understand the relationship between groundwater use and drought [^3].  
 
 
 ***  
