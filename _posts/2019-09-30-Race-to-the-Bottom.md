@@ -88,7 +88,9 @@ Data from well completion reports in California confirms that agricultural wells
 
 <br>
 
-The multi-billion dollar agricultural industry fueled by groundwater in California is a bubble of sorts that should be carefully managed. Growth that depends on unsustainable groundwater extraction will eventually come to a head, and cost the region revenue and jobs, in the process displacing tens if not hundreds of thousands of workers and people who depend on local economies created by the agricultural industry. What is the way forward?  
+The multi-billion dollar agricultural industry fueled by groundwater in California is a bubble of sorts that should be carefully managed. Growth that depends on unsustainable groundwater extraction will eventually come to a head, and cost the region revenue and jobs, in the process displacing tens if not hundreds of thousands of workers and people who depend on local economies created by the agricultural industry.  
+
+What is the way forward?  
 
 First and foremost, to borrow a tired platitude, _we can only manage what we can measure_. California, and regions worldwide that seek to curb unsustainable groundwater use need to leverage [low-cost, remote sensor networks to monitor groundwater resources in near-real time](http://ucwater.org/gw_obs). New well permits should come conditional with smart meters that measure water extraction and enable the creation of [groundwater markets](https://www.ppic.org/publication/californias-water-market/).  
 
