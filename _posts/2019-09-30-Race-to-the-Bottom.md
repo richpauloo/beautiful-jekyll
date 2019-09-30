@@ -3,7 +3,7 @@
 **In California, groundwater extraction for agriculture has boomed over the past 75 years, and the average well drilled today has more than doubled in depth compared to wells drilled in 1940, according to Department of Water Resources data.**
 
 <center>
-    <img src="gif/d15_gb.gif" alt="Agricultural groundwater wells surge during drought" width="70%"/>
+    <img src="/img/d15_gb.gif" alt="Agricultural groundwater wells surge during drought" width="70%"/>
 </center>
 
 
@@ -22,7 +22,8 @@ Until recently, the extraction of groundwater in California wasn't regulated in 
 To address these issues, in 2014, California passed the **Sustainable Groundwater Management Act**, **SGMA** for short, though some are skeptical that it will be effective.  
 
 > “It’s great that we have groundwater legislation in California, finally. There’s a lot of good in [SGMA]. But the great tragedy, the absolute great tragedy with SGMA is its incredibly long lead in, the fact that it really doesn’t get implemented for 20 years.” 
-> - Adam Keats, Environmental Attorney at the Center for Food Safety
+> 
+> -Adam Keats, Environmental Attorney at the Center for Food Safety
 
 To understand the consequences of this long lead-in to SGMA, we first need to understand the relationship between groundwater use and drought.  
 
@@ -55,7 +56,9 @@ Anecdotally, demand for well drillers during the last 2012-2016 drought was so g
 
 In California's Central Valley, the hotspot of groundwater extraction, some fear that the 20 year implementation of SGMA creates a regulatory vacuum that some landowners will exploit until apprehended.  
 
-> Look, in some places [of California] it’s literally a race to the bottom, because there are many farmers that are trying to do things now, before the [the Sustainable Groundwater Management Act (SGMA)] kicks in. - Jay Famiglietti, Hydrologist and Executive Director of the Global Institute for Water Security at the University of Saskatchewan
+> Look, in some places [of California] it’s literally a race to the bottom, because there are many farmers that are trying to do things now, before the [the Sustainable Groundwater Management Act (SGMA)] kicks in.  
+> 
+> -Jay Famiglietti, Hydrologist and Executive Director of the Global Institute for Water Security at the University of Saskatchewan
 
 Data from well completion reports in California confirms that agricultural wells are indeed being drilled deeper. Access to deeper groundwater is a hedge against drought, unreliable surface water supply, and the uncertainty of future legislation. It doesn't hurt to have more access to groundwater before SGMA fully kicks in.  
 
