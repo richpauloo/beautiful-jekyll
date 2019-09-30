@@ -40,9 +40,9 @@ To understand the consequences of this long lead-in to SGMA, we first need to un
 <b>More agricultural wells are drilled during droughts in California, when surface water is scarce, and demand for groundwater skyrockets.</b>
 </p>
 
-<center>
+
 ![](/img/p1.png)  
-</center>
+
 
 Whenever a well of any type (e.g. - agricultural, public, domestic, remediation, monitoring) is drilled in California, a well completion report is filed with the state documenting its location, depth, use, and other characteristics [^4]. These data were mined to observe the number of agricultural wells drilled per year, shown above.  
 
@@ -60,9 +60,9 @@ Anecdotally, demand for well drillers during the last 2012-2016 drought was so g
 <b>The average agricultural well today is twice as deep as it was in 1940.</b>
 </p>
 
-<center>
+
 ![](/img/p2.png)
-</center>
+
 
 In California's Central Valley, the hotspot of groundwater extraction, some fear that the 20 year implementation of SGMA creates a regulatory vacuum that some landowners will exploit until apprehended.  
 
