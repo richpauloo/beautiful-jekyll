@@ -44,10 +44,11 @@ I imagine that Californians will use this tool to learn more about water quality
 
 I turn on the tap every day to drink, shower, cook, and water the plants, generally taking for granted that clean water flows out. If I were to trace the water back through the pipe, I'd find a complex network of water utilities, treatment plants, and regulatory bodies all working together to acquire, treat, and deliver that water. This is one of the privileges of living in a wealthy country that’s easy to forget. If you asked me to tell you about the quality of the water coming out of my tap, about the different chemicals tested for and the levels detected, I wouldn't be able to. I might search the internet to search for this information, but I would find it difficult to find and make sense of.  
 
-Water in California is provided by a federated system of independent utilities. Some water agencies are so small that they slip through the cracks of state-mandated water quality testing, and others, like Metropolitan water district, are so large that they make up a majority of the water users in the state (see bubble chart below, created by [Avery Kreuger](https://twitter.com/averymkruger?lang=en).  
+Water in California is provided by a federated system of independent utilities. Some water agencies are so small that they slip through the cracks of state-mandated water quality testing, and others, like Metropolitan water district, are so large that they make up a majority of the water users in the state (see bubble chart below, created by [Avery Kreuger](https://twitter.com/averymkruger?lang=en). Note that some smaller water districts in the chart buy water from other districts in the chart, and that the population listed is the total number of people served by each system. For example Metropolitan water district is a wholesaler that serves 18M people, but [through other retailers that are also listed](http://www.mwdh2o.com/WhoWeAre/Member-Agencies) (e.g. - City of Long Beach, City of Fullerton, Calleguas Municipal Water District).  
 
 
 <iframe src="https://richpauloo.github.io/avery/index.html" frameborder="0" scrolling="yes" seamless="seamless" style="display:block; width:100%; height:100vh;"></iframe>
+
 
 
 
