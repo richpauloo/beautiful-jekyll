@@ -3,7 +3,7 @@
 **In California, groundwater extraction for agriculture has boomed over the past 75 years, and the average well drilled today has more than doubled in depth compared to wells drilled in 1940, according to Department of Water Resources data.**
 
 <center>
-    <img src="/img/d15_gb.gif" alt="Agricultural groundwater wells surge during drought" width="70%"/>
+    <img src="/img/d15_gb.gif" alt="Agricultural groundwater wells surge during drought" width="100%"/>
 </center>
 
 
