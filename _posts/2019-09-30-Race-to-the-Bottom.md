@@ -1,11 +1,13 @@
 ## The Incredible Surge of Groundwater Extraction in California
 
+<p align="center">
+<b>In California, groundwater extraction for agriculture has boomed over the past 75 years, and the average well drilled today has more than doubled in depth compared to wells drilled in 1940, according to Department of Water Resources data.</b>
+</p>
+
 <center>
-**In California, groundwater extraction for agriculture has boomed over the past 75 years, and the average well drilled today has more than doubled in depth compared to wells drilled in 1940, according to Department of Water Resources data.**  
-
 <img src="/img/d15_gb.gif" alt="Agricultural groundwater wells surge during drought" width="100%"/> 
-
 </center>
+
 
 
 ***
@@ -34,9 +36,11 @@ To understand the consequences of this long lead-in to SGMA, we first need to un
 
 # Agricultural well drilling peaks during drought
 
-<center>
-**More agricultural wells are drilled during droughts in California, when surface water is scarce, and demand for groundwater skyrockets.**  
+<p align="center">
+<b>More agricultural wells are drilled during droughts in California, when surface water is scarce, and demand for groundwater skyrockets.</b>
+</p>
 
+<center>
 ![](/img/p1.png)  
 </center>
 
@@ -52,9 +56,11 @@ Anecdotally, demand for well drillers during the last 2012-2016 drought was so g
 
 # Agricultural wells are being drilled deeper
 
-<center>
-**The average agricultural well today is twice as deep as it was in 1940.**
+<p align="center">
+<b>The average agricultural well today is twice as deep as it was in 1940.</b>
+</p>
 
+<center>
 ![](/img/p2.png)
 </center>
 
@@ -72,10 +78,11 @@ Data from well completion reports in California confirms that agricultural wells
 
 ## Groundwater depletion in California is part of a larger, worldwide trend 
 
+<p align="center">
+<b>Groundwater extraction in the Middle East, India, Pakistan, China, and Mexico has reached alarming rates, and poses similar sustainability issues to those faced in California today.</b>
+</p>
+
 <center>
-**Groundwater extraction in the Middle East, India, Pakistan, China, and Mexico has reached alarming rates, and poses similar sustainability issues to those faced in California today.**
-
-
 <iframe width="560" height="315" src="https://www.youtube.com/embed/p8PsXPnnYuw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </center>
 
