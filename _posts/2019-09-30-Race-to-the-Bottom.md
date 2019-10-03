@@ -78,7 +78,7 @@ Data from well completion reports in California confirms that agricultural wells
 # Around the world in 80,000 wells
 
 <p align="center">
-<b>The combined depth of the roughly 80,000 agricultural wells drilled since 1940 would stretch from Seattle to Guangzhou.</b>
+<b>If you laid each of the roughly 80,000 agricultural wells drilled since 1940 in California on top of one another, they would stretch from Seattle to Guangzhou.</b>
 </p>
 
 <center>
