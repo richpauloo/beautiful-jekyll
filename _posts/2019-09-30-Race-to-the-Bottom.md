@@ -85,7 +85,7 @@ Data from well completion reports in California confirms that agricultural wells
 <iframe width="560" height="315" src="https://richpauloo.github.io/htmlwidgets/globe/globe.html" frameborder="0"></iframe>
 </center>
 
-I'm a fan of simple math. If we sum the depth of the roughyl 80,000 agricultural wells drilled since 1940, we arrive at 33,004,191 feet. That's 6,251 miles, which is roughly a quarter of the earth's circumference (24,901 miles). The distance from Seattle, Washington to my mother's hometown in Guangzhou, China. 
+I'm a fan of simple math. If we sum the depth of the roughly 80,000 agricultural wells drilled in California since 1940, we arrive at 33,004,191 feet. That's 6,251 miles, which is about the distance from Seattle, Washington to my mother's hometown in Guangzhou, China is (6,453 miles). Fun fact, it’s also about 25% of the earth’s circumference (24,901 miles).
 
 
 ***  
