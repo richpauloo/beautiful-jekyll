@@ -98,7 +98,13 @@ I'm a fan of simple math. If we sum the depth of the roughly 80,000 agricultural
 </p>
 
 <center>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/p8PsXPnnYuw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<div class="embed-video">
+    <div class="videoWrapper">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/p8PsXPnnYuw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</div>
+
 </center>
 
 <br>
