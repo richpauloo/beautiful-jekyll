@@ -8,6 +8,8 @@
 <img src="/img/d15_gb.gif" alt="Agricultural groundwater wells surge during drought" width="100%"/> 
 </center>
 
+_If the animation above doesn't load, or appears slow, [try viewing it here.](https://twitter.com/RichPauloo/status/1178790977487589376)_
+
 <!-- <center>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/N8VwJKTk0CU?autoplay=1&showinfo=0&loop=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </center> -->
