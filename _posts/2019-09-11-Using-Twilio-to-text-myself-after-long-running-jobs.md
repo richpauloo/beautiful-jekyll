@@ -1,3 +1,7 @@
+---
+gh-badge: [star, watch, fork, follow]
+---
+
 I was running a pretty long geocoding job, and I ended up throwing a [`beepr::beep()`](https://www.r-project.org/nosvn/pandoc/beepr.html) into the console just so I would get a notification when the job completed.  
 
 But the beep alerts me over the computer, so I was tied to it...  darn.  
