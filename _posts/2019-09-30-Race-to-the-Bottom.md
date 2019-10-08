@@ -1,3 +1,7 @@
+---
+share-img: https://cdn.firespring.com/images/ad4616cf-0ce7-4b78-8532-c049bebed9db.jpg
+---
+
 ## The Incredible Surge of Groundwater Extraction in California
 
 <p align="center">
