@@ -1,4 +1,5 @@
 ---
+gh-repo: richpauloo/textme
 gh-badge: [star, watch, fork, follow]
 ---
 
