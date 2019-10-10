@@ -3,7 +3,7 @@ gh-repo: richpauloo/textme
 gh-badge: [star, watch, fork, follow]
 ---
 
-**UPDATE** This is now a package you can download on Github with `devtools::install_github("richpauloo/textme")`. 
+**UPDATE** This is [now a package](https://github.com/richpauloo/textme) you can download on Github with `devtools::install_github("richpauloo/textme")`. 
 
 ***  
 
