@@ -53,7 +53,7 @@ However, see the [offical docs](https://help.github.com/en/github/working-with-g
 
 # Step 4
 
-Nagivate to username.com to see your github page! Be patient if it doesn't immediately show, which is related to [DNS propogration(https://www.namecheap.com/support/knowledgebase/article.aspx/9622/10/dns-propagation--explained). 
+Nagivate to username.com to see your github page! Be patient if it doesn't immediately show, which is related to [DNS propogration](https://www.namecheap.com/support/knowledgebase/article.aspx/9622/10/dns-propagation--explained). 
 
 ***  
 
@@ -62,4 +62,4 @@ Here are three resources I found helpful while doing this:
 
 1. [Offical docs](https://help.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site#about-custom-domain-configuration)
 2. [An unoffical guide](https://medium.com/@hossainkhan/using-custom-domain-for-github-pages-86b303d3918a).  
-3. [Nice explanation of A records(https://www.godaddy.com/help/add-an-a-record-19238)
+3. [Nice explanation of A records](https://www.godaddy.com/help/add-an-a-record-19238)
