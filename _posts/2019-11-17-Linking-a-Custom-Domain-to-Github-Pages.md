@@ -39,14 +39,14 @@ Next, in your DNS Management console, add 4 separate A records with the followin
 
 * type = A  
 * name = @  
-* points to (value) = IP  
+* points to (value) = IP   
   
 
 <center>
 <img src="/img/ar.png" alt="custom domain with github pages tutorial" width="100%"/> 
 </center>
 
-The IP are the Github IP addresses that host your username.github.io site. As of writing (2019-11-15) these IPs are: 
+For IP, supply the Github IP addresses that host your username.github.io site. As of writing (2019-11-15) these IPs are: 
 
 ```
 185.199.108.153
@@ -55,13 +55,13 @@ The IP are the Github IP addresses that host your username.github.io site. As of
 185.199.111.153
 ```
 
-However, see the [offical docs](https://help.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site#about-custom-domain-configuration) for the most up-to-date values.  
+However the values might have changed since the time of writing. See the [offical docs](https://help.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site#about-custom-domain-configuration) for the most up-to-date values.  
 
-**Meaning:** A records connect your domain name (hosted by your DNS) to the actual IP addresses where your site lives on a server (at Github).  
+**Meaning:** "A" records connect your domain name (hosted by your DNS) to the actual IP addresses where your site lives on a server (at Github).  
 
 # Step 4
 
-Nagivate to username.com to see your github page! Be patient if it doesn't immediately show, which is related to [DNS propogration](https://www.namecheap.com/support/knowledgebase/article.aspx/9622/10/dns-propagation--explained). 
+Nagivate to username.com to see your github page! Be patient if it doesn't immediately show. This lag is related to [DNS propogration](https://www.namecheap.com/support/knowledgebase/article.aspx/9622/10/dns-propagation--explained). 
 
 ***  
 
