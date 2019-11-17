@@ -14,7 +14,7 @@ Buy a domain (e.g., richpauloo.com). I used godaddy.com, but you can use any num
 
 In your github.io repository, add the domain you purchased in Step 1 to the "Custom domain box":  
 
-![](img/cd.png)  
+![](/img/cd.png)  
 
 Make sure you do Step 2 before Step 3, for security reasons outlined in the [Official Github docs](https://help.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site#about-custom-domain-configuration).  
 
@@ -26,13 +26,17 @@ In your DNS Management console, add a CNAME record with the following parameters
 * name = www
 * value = username.github.io.
 
+![](/img/cn.png)  
+
 **Meaning:** This tells your DNS to point www.username.com requests towards the site hosted at username.github.io. Set the TTL (time to live) to an hour or less.  
 
-Next, add 4 separate A records with the following information:  
+Next, in your DNS Management console, add 4 separate A records with the following information:  
 
 * type = A  
 * name = @  
 * points to (value) = IP  
+
+![](/img/ar.png)  
 
 The IP are the Github IP addresses that host your username.github.io site. As of writing (2019-11-15) these IPs are: 
 
