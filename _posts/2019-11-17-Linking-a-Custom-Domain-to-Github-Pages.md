@@ -12,7 +12,7 @@ Buy a domain (e.g., richpauloo.com). I used godaddy.com, but you can use any num
 
 # Step 2  
 
-In your github.io repository, add the domain you purchased in Step 1 to the "Custom domain box":  
+In your github.io repository Settings, add the domain you purchased in Step 1 to the "Custom domain box":  
 
 <center>
 <img src="/img/cd.png" alt="custom domain with github pages tutorial" width="100%"/> 
