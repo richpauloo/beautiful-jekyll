@@ -25,23 +25,23 @@ description: Rich Pauloo's nerd blog and scientific research page.
 navbar-links:
   About: "aboutme"
   Research: "research"
-  Projects:
-    - textme: "https://github.com/richpauloo/textme"
-    - Domestic Well Vulnerability: "flexdash.html"
-    - CA Well Completion Reports: "oswcr_1.html"
-    - Predicting Fatal Landslides: "landslides.html"
+  #Projects:
+  #  - textme: "https://github.com/richpauloo/textme"
+  #  - Domestic Well Vulnerability: "flexdash.html"
+  #  - CA Well Completion Reports: "oswcr_1.html"
+  #  - Predicting Fatal Landslides: "landslides.html"
     # Statistical Significance Tests: "stat.html" 
-    - Learning: "learn"
+  #  - Learning: "learn"
     
-  Apps:
-    - CCR: "https://caccr.github.io"
-    - Groundwater Observatory: "http://ucwater.org/gw_obs/"
-    - OSWCR Tool: "http://ucwater.org/oswcr/"
-    - AbstR: "https://richpauloo.shinyapps.io/abstr/"
-    - Tulare TDS: "https://richpauloo.shinyapps.io/tds_leaflet/"
-    - Word Cloud Generator: "https://richpauloo.shinyapps.io/word_cloud_app/"
-    - CIG NLP: "https://richpauloo.shinyapps.io/cig_nlp/"
-  CV: "https://richpauloo.github.io/cv"
+  #Apps:
+  #  - CCR: "https://caccr.github.io"
+  #  - Groundwater Observatory: "http://ucwater.org/gw_obs/"
+  #  - OSWCR Tool: "http://ucwater.org/oswcr/"
+  #  - AbstR: "https://richpauloo.shinyapps.io/abstr/"
+  #  - Tulare TDS: "https://richpauloo.shinyapps.io/tds_leaflet/"
+  #  - Word Cloud Generator: "https://richpauloo.shinyapps.io/word_cloud_app/"
+  #  - CIG NLP: "https://richpauloo.shinyapps.io/cig_nlp/"
+  #CV: "https://richpauloo.github.io/cv"
     #- CV: "richpauloo.github.io/rap-rmarkdown-cv.pdf"
     #- Resume: 
 

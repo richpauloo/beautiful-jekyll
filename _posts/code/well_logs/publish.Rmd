@@ -8,18 +8,11 @@ output:
     code_folding: hide
 ---
 
-*Authored by: Rich Pauloo, PhD Candidate in Hydrologic Sciences at UC Davis*  
-contact: rpauloo@ucdavis.edu  
-[Twitter](https://twitter.com/richpauloo)  
-[Website](richpauloo.github.io)  
 
-***
 
-## Summary 
+At the time of writing, the [California DWR Online Well Completion Report Database](https://data.ca.gov/dataset/well-completion-reports) contains ~1,000,000 digitized well logs. About 1/3 of those wells have information on the top and bottom of the perforated interval.  
 
-The California DWR Online Well Completion Report Database contains ~1,000,000 digitized well logs. About 1/3 of those wells have information on the top and bottom of the perforated interval.  
-
-The purpose of this analysis is to clean and visualize the data for future machine learning objectives related to predicting groundwater quality. The analysis might also aid in the parameterization of groundwater flow and transport models in basins still developing regional models. In this analysis, I'm interested in looking at:  
+In this blog post, I'll clean data, then compute and visualize regional estimates of:  
 
 * top of perforated interval - aquifer top  
 * bottom of perforated interval - aquifer bottom  
@@ -28,6 +21,7 @@ The purpose of this analysis is to clean and visualize the data for future machi
 ***
 
 ## Clean
+
 First load up packages.  
 ```{r, warning=FALSE, error=FALSE, message=FALSE}
 library(sp)
@@ -46,7 +40,7 @@ library(ggplot2)
 
 Bring in the raw data. 
 ```{r, warning=FALSE, message=FALSE}
-dat <- read_csv("OSWCR_201801.csv")
+dat <- read_csv("~/Github/rp/static/data/OSWCR_201801.csv")
 head(dat)
 ```
 
@@ -69,14 +63,15 @@ nrow(full) # keep
 
 Assign better names and calculate perforated interval thickness and extract only relevant columns for plotting.  
 ```{r}
-full %>%
+full_b <- 
+  full %>%
   mutate(b = BottomofPerforatedInterval - TopOfPerforatedInterval) %>%
   dplyr::select(long_fixed, DecimalLatitude, TopOfPerforatedInterval,
                 BottomofPerforatedInterval, b) %>%
   rename(bot = BottomofPerforatedInterval, top = TopOfPerforatedInterval,
-         lon = long_fixed, lat = DecimalLatitude) -> full_b
+         lon = long_fixed, lat = DecimalLatitude)
 
-full_b %>% filter(bot < 2500 & top < 2500 & b > 0) -> full_b_reasonable
+full_b_reasonable <- full_b %>% filter(bot < 2500 & top < 2500 & b > 0)
 ```
 
 Convert spatial pts to sf object.  
@@ -86,145 +81,200 @@ pts <- st_as_sf(full_b_reasonable,
                 remove = F,
                 crs = 4326)
 
-pts %>% sf::st_transform(4326) -> pts_trans
+pts_trans <- pts %>% sf::st_transform(4326)
 ```
 
 Let's look at where these points are located  
 ```{r}
-pts %>% ggplot() + geom_point(aes(lon, lat), alpha = 0.2) + coord_fixed(1.3) + theme_bw()
+pts %>% 
+  ggplot() + 
+  geom_point(aes(lon, lat), alpha = 0.2) + 
+  coord_fixed(1.3) + 
+  theme_minimal()
 ```
 
 This is clearly too much to look at with points. Let's group the wells into meaningful units to aggregate information. Bulletin 118 groundwater subbasins are appropriate units to group by. 
 ```{r}
-s <- shapefile(here('shapefiles','I08_B118_CA_GroundwaterBasins.shp')) # Bulletin 118 GW subbasins
+# Bulletin 118 GW subbasins
+s <- shapefile("~/Github/rp/static/data/I08_B118_CA_GroundwaterBasins/I08_B118_CA_GroundwaterBasins.shp") 
 gwb <- st_as_sf(s,
        coords = c("lon", "lat"), # for point data
        remove = F, # don't remove these lat/lon cols from df
        crs = 4326)
 
-gwb %>% ggplot() + geom_sf() + theme_bw() + ggtitle("Bulletin 118 Groundwater Basins")
+gwb %>% 
+  ggplot() + 
+  geom_sf() + 
+  theme_minimal() + 
+  labs(title = "Bulletin 118 Groundwater Basins")
 ```
 
-To aggregrate our well points into Bulletin 118 ploygons, we'll perform an intersection, but for the math to work, we need to transform the polygons and pts into same projection.
+To aggregrate our well points into Bulletin 118 ploygons, we'll perform an intersection, but for the math to work, we first transform the polygons and points into the same projection. I also like to do this in `sp`, since it's much faster than the `sf` method as of the time of writing.
 ```{r}
-gwb %>% sf::st_transform(4326) -> gwb_trans
+gwb_trans <- spTransform(s, crs(pts_trans))
+
+# subset to B118 basins
+pts_trans_sp <- as(pts_trans, "Spatial")
+gwb_pts <- pts_trans_sp[gwb_trans, ]
 
 # perform intersection: join points to polygons, and filter points that fall outside of polygons
-#sf::st_intersection(pts_trans,gwb_trans) -> gwb_pts
-
-# remove polygon geometries and write pts to a csv because this operation takes a while
-#test_3 %>% as.data.frame() %>% select(-geometry) %>% write_csv("R_intersection_gwb_pts.csv")
+gwb_pts <- raster::intersect(gwb_pts, gwb_trans)
 ```
 
-Looks like our intersection worked. Compared to the previous plot, points are isolated to the Bulletin 118 groundwater subregions.  
+The intersection worked. Compared to the previous plot, points are isolated to the Bulletin 118 groundwater subregions.  
 ```{r, message = FALSE, warning = FALSE}
-gwb_pts <- read_csv("R_intersection_gwb_pts.csv")
-
-gwb_pts %>% ggplot() + geom_point(aes(lon,lat), alpha = 0.2) + coord_fixed(1.3) + theme_bw()
+gwb_pts@data %>% 
+  ggplot() + 
+  geom_point(aes(lon,lat), alpha = 0.2) + 
+  coord_fixed(1.3) + 
+  theme_void()
 ```
 
 ## Calculate
-Group by basin and subbasin (Basin_Subb), calculate mean, median, sample size. SD is useless because distributions aren't normal.
+
+Group by basin and subbasin (Basin_Subb), calculate mean, median, sample size. SD is not informative, as the distributions aren't normal.
 ```{r}
 # thickness of perforated interval mean and median
-gwb_pts %>% group_by(Basin_Subb) %>% summarise(mean_pit = mean(b, na.rm = TRUE)) -> gwb_mean_pit
-gwb_pts %>% group_by(Basin_Subb) %>% summarise(median_pit = median(b, na.rm = TRUE)) -> gwb_median_pit
-
-# top of perforated interval mean and median
-gwb_pts %>% group_by(Basin_Subb) %>% summarise(mean_top = mean(top, na.rm = TRUE)) -> gwb_mean_top
-gwb_pts %>% group_by(Basin_Subb) %>% summarise(median_top = median(top, na.rm = TRUE)) -> gwb_median_top
-
-# bottom of perforated interval mean and median
-gwb_pts %>% group_by(Basin_Subb) %>% summarise(mean_bot = mean(bot, na.rm = TRUE)) -> gwb_mean_bot
-gwb_pts %>% group_by(Basin_Subb) %>% summarise(median_bot = median(bot, na.rm = TRUE)) -> gwb_median_bot
-
-# sample size: number of wells
-gwb_pts %>% count(Basin_Subb) -> gwb_n_wells
-
-# join back into polygons df
-gwb_full <- gwb %>%
-  left_join(gwb_mean_pit, by="Basin_Subb") %>%
-  left_join(gwb_median_pit, by = "Basin_Subb") %>% 
-  
-  left_join(gwb_mean_top, by="Basin_Subb") %>%
-  left_join(gwb_median_top, by = "Basin_Subb") %>% 
-  
-  left_join(gwb_mean_bot, by="Basin_Subb") %>%
-  left_join(gwb_median_bot, by = "Basin_Subb") %>% 
-  
-  left_join(gwb_n_wells, by = "Basin_Subb")
+gwb_summary <- gwb_pts@data %>% 
+  group_by(Basin_Subb) %>% 
+  summarise(mean_pit = mean(b, na.rm = TRUE),
+            median_pit = median(b, na.rm = TRUE),
+            mean_top = mean(top, na.rm = TRUE),
+            median_top = median(top, na.rm = TRUE),
+            mean_bot = mean(bot, na.rm = TRUE),
+            median_bot = median(bot, na.rm = TRUE),
+            n = n())
 ```
 
 One last transformation.
 ```{r}
-# put into right crs
-gwb_full %>% st_transform(4326) -> gwb_full
+# join the summarized data to the spatil object, and put into right crs
+gwb_full <- left_join(gwb, gwb_summary, by = "Basin_Subb") %>% 
+  st_transform(4326)
 ```
 
 ***
 
 ## Map
 
-Create custom labels
+Create custom labels. I should really make a function for this, but in the interest of time, I copy/pasted. C'est la vie.
 ```{r}
 # create a complete subbasin name
-gwb_full$Subbasin_N[is.na(gwb_full$Subbasin_N)] <- "" # convert NA to "" for pasting
-gwb_full$complete_subbasin_name <- paste(gwb_full$Basin_Name, gwb_full$Subbasin_N) # complete basin-subbasin names
+# convert NA to "" for pasting
+gwb_full$Subbasin_N[is.na(gwb_full$Subbasin_N)] <- "" 
+
+# complete basin-subbasin names
+gwb_full$complete_subbasin_name <- paste(gwb_full$Basin_Name, gwb_full$Subbasin_N)
 
 # create labels for each layer
 # pit
 mean_pit_label <- lapply(seq(nrow(gwb_full)), function(i) {
-  paste0( '<p>', gwb_full[i, "complete_subbasin_name"], '  (', gwb_full[i, "Basin_Subb"],')', '<p></p>',
-          'mean thickness = ',round(as.numeric(gwb_full[i, "mean_pit"],2)), ' ft.','</p><p>', 
-          'n_wells = ', gwb_full[i, "n"], '</p>' ) 
-}) %>% lapply(`[[`, 1)
+  paste0( '<p>', 
+          gwb_full[i, "complete_subbasin_name"], 
+          '  (', gwb_full[i, "Basin_Subb"],')', 
+          '<p></p>',
+          'mean thickness = ',
+          round(as.numeric(gwb_full[i, "mean_pit"],2)), 
+          ' ft.',
+          '</p><p>', 
+          'n_wells = ', 
+          gwb_full[i, "n"], 
+          '</p>' ) 
+  }) %>% 
+  lapply(`[[`, 1)
 
 median_pit_label <- lapply(seq(nrow(gwb_full)), function(i) {
-  paste0( '<p>', gwb_full[i, "complete_subbasin_name"], '  (', gwb_full[i, "Basin_Subb"],')', '<p></p>',
-          'median thickness = ',round(as.numeric(gwb_full[i, "median_pit"],2)), ' ft.','</p><p>', 
-          'n_wells = ', gwb_full[i, "n"], '</p>' ) 
-}) %>% lapply(`[[`, 1)
+  paste0( '<p>', 
+          gwb_full[i, "complete_subbasin_name"], 
+          '  (', 
+          gwb_full[i, "Basin_Subb"],')', 
+          '<p></p>',
+          'median thickness = ',
+          round(as.numeric(gwb_full[i, "median_pit"],2)), 
+          ' ft.',
+          '</p><p>', 
+          'n_wells = ', 
+          gwb_full[i, "n"], 
+          '</p>' ) 
+  }) %>% 
+  lapply(`[[`, 1)
 
 # top
 mean_top_label <- lapply(seq(nrow(gwb_full)), function(i) {
-  paste0( '<p>', gwb_full[i, "complete_subbasin_name"], '  (', gwb_full[i, "Basin_Subb"],')', '<p></p>',
-          'mean depth = ',round(as.numeric(gwb_full[i, "mean_top"],2)), ' ft.','</p><p>', 
-          'n_wells = ', gwb_full[i, "n"], '</p>' ) 
-}) %>% lapply(`[[`, 1)
+  paste0( '<p>', 
+          gwb_full[i, "complete_subbasin_name"], 
+          '  (', 
+          gwb_full[i, "Basin_Subb"],')', 
+          '<p></p>',
+          'mean depth = ',
+          round(as.numeric(gwb_full[i, "mean_top"],2)), 
+          ' ft.',
+          '</p><p>', 
+          'n_wells = ', 
+          gwb_full[i, "n"], 
+          '</p>' ) 
+  }) %>% 
+  lapply(`[[`, 1)
 
 median_top_label <- lapply(seq(nrow(gwb_full)), function(i) {
-  paste0( '<p>', gwb_full[i, "complete_subbasin_name"], '  (', gwb_full[i, "Basin_Subb"],')', '<p></p>',
-          'median depth = ',round(as.numeric(gwb_full[i, "median_top"],2)), ' ft.','</p><p>', 
-          'n_wells = ', gwb_full[i, "n"], '</p>' ) 
-}) %>% lapply(`[[`, 1)
+  paste0( '<p>', 
+          gwb_full[i, "complete_subbasin_name"], 
+          '  (', gwb_full[i, "Basin_Subb"],')', 
+          '<p></p>',
+          'median depth = ',
+          round(as.numeric(gwb_full[i, "median_top"],2)), 
+          ' ft.',
+          '</p><p>', 
+          'n_wells = ', 
+          gwb_full[i, "n"], 
+          '</p>' ) 
+  }) %>% 
+  lapply(`[[`, 1)
 
 # bot
 mean_bot_label <- lapply(seq(nrow(gwb_full)), function(i) {
-  paste0( '<p>', gwb_full[i, "complete_subbasin_name"], '  (', gwb_full[i, "Basin_Subb"],')', '<p></p>',
-          'mean depth = ',round(as.numeric(gwb_full[i, "mean_bot"],2)), ' ft.','</p><p>', 
-          'n_wells = ', gwb_full[i, "n"], '</p>' ) 
-}) %>% lapply(`[[`, 1)
+  paste0( '<p>', 
+          gwb_full[i, "complete_subbasin_name"], 
+          '  (', gwb_full[i, "Basin_Subb"],')', 
+          '<p></p>',
+          'mean depth = ',
+          round(as.numeric(gwb_full[i, "mean_bot"],2)), 
+          ' ft.',
+          '</p><p>', 
+          'n_wells = ', 
+          gwb_full[i, "n"], 
+          '</p>' ) 
+  }) %>% 
+  lapply(`[[`, 1)
 
 median_bot_label <- lapply(seq(nrow(gwb_full)), function(i) {
-  paste0( '<p>', gwb_full[i, "complete_subbasin_name"], '  (', gwb_full[i, "Basin_Subb"],')', '<p></p>',
-          'median depth = ',round(as.numeric(gwb_full[i, "median_bot"],2)), ' ft.','</p><p>', 
-          'n_wells = ', gwb_full[i, "n"], '</p>' ) 
-}) %>% lapply(`[[`, 1)
+  paste0( '<p>', 
+          gwb_full[i, "complete_subbasin_name"], 
+          '  (', gwb_full[i, "Basin_Subb"],')', 
+          '<p></p>',
+          'median depth = ',
+          round(as.numeric(gwb_full[i, "median_bot"],2)), 
+          ' ft.',
+          '</p><p>', 
+          'n_wells = ', 
+          gwb_full[i, "n"], 
+          '</p>' ) 
+  }) %>% 
+  lapply(`[[`, 1)
 ```
 
 
 ### Thickness of perforated Interval
 ```{r}
 bins <- c(0,50, 100,200,300,400,500,600)
-
-pal <- colorBin("inferno", gwb_full$mean_pit, bins = bins) # viridis, magma, inferno, plasma
+pal <- colorBin("inferno", gwb_full$mean_pit, bins = bins)
 
 # make another layer control group name
 gwb_full$Basin_Subb_2 <- gwb_full$Basin_Subb
 
 # rename groups for legend
-gwb_full %>% rename(median_perforated_interval_thickness = Basin_Subb,
-                    mean_perforated_interval_thickness = Basin_Subb_2) -> temp
+temp <- gwb_full %>% rename(median_perforated_interval_thickness = Basin_Subb,
+                    mean_perforated_interval_thickness = Basin_Subb_2)
 
 # plot
 leaflet(width = "100%") %>%
@@ -241,19 +291,21 @@ leaflet(width = "100%") %>%
               group = "median_perforated_interval_thickness") %>%
   addLegend(pal = pal, values = temp$mean_pit,
             title = ("thickness (ft.)")) %>%
-  addLayersControl(overlayGroups = c("median_perforated_interval_thickness","mean_perforated_interval_thickness")) %>%
+  addLayersControl(overlayGroups =
+                     c("median_perforated_interval_thickness",
+                       "mean_perforated_interval_thickness")) %>%
   hideGroup("median_perforated_interval_thickness")
 ```
 
 ### Top of Perforated Interval: Aquifer Top (depth below sea level)
 ```{r}
 bins <- c(0,100,200,300,400,500,600,700, 800, 900, 1000)
-
-pal <- colorBin("viridis", gwb_full$mean_top, bins = bins) # viridis, magma, inferno, plasma
+pal <- colorBin("viridis", gwb_full$mean_top, bins = bins) 
 
 # rename groups for legend
-gwb_full %>% rename(median_top_perforated_interval = Basin_Subb,
-                    mean_top_perforated_interval = Basin_Subb_2) -> temp
+temp <- gwb_full %>% 
+  rename(median_top_perforated_interval = Basin_Subb,
+         mean_top_perforated_interval = Basin_Subb_2) 
 
 # plot
 leaflet(width = "100%") %>%
@@ -270,19 +322,20 @@ leaflet(width = "100%") %>%
               group = "median_top_perforated_interval") %>%
   addLegend(pal = pal, values = temp$mean_top,
             title = ("depth (ft.)")) %>%
-  addLayersControl(overlayGroups = c("median_top_perforated_interval","mean_top_perforated_interval")) %>%
+  addLayersControl(overlayGroups =
+                     c("median_top_perforated_interval",
+                       "mean_top_perforated_interval")) %>%
   hideGroup("median_top_perforated_interval")
 ```
 
 ### Bottom of Perforated Interval: Aquifer Bottom (depth below sea level)
 ```{r}
 bins <- c(0,100,200,300,400,500,600,700, 800, 900, 1000, 1100)
-
-pal <- colorBin("viridis", gwb_full$mean_bot, bins = bins) # viridis, magma, inferno, plasma
+pal <- colorBin("viridis", gwb_full$mean_bot, bins = bins) 
 
 # rename groups for legend
-gwb_full %>% rename(median_bot_perforated_interval = Basin_Subb,
-                    mean_bot_perforated_interval = Basin_Subb_2) -> temp
+temp <- gwb_full %>% rename(median_bot_perforated_interval = Basin_Subb,
+                    mean_bot_perforated_interval = Basin_Subb_2)
 
 # plot
 leaflet(width = "100%") %>%
@@ -299,12 +352,9 @@ leaflet(width = "100%") %>%
               group = "median_bot_perforated_interval") %>%
   addLegend(pal = pal, values = temp$mean_bot,
             title = ("depth (ft.)")) %>%
-  addLayersControl(overlayGroups = c("median_bot_perforated_interval","mean_bot_perforated_interval")) %>%
+  addLayersControl(overlayGroups =
+                     c("median_bot_perforated_interval",
+                       "mean_bot_perforated_interval")) %>%
   hideGroup("median_bot_perforated_interval")
 ```
 
-***
-
-# References  
-
-[California Online State Well Completion Reports](http://wdl.water.ca.gov/groundwater/wells/well_completion_reports.cfm)  
