@@ -24,7 +24,7 @@ description: Rich Pauloo's nerd blog and scientific research page.
 # List of links in the navigation bar
 navbar-links:
   About: "aboutme"
-  Research: "research"
+  #Research: "research"
   #Projects:
   #  - textme: "https://github.com/richpauloo/textme"
   #  - Domestic Well Vulnerability: "flexdash.html"
