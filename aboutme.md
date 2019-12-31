@@ -6,4 +6,4 @@ show-avatar: false
 ---
 
  
-## [Click here to be re-rerouted to my new website.](http://www.richpauloo.com/)
+## [Click here to visit my new website.](http://www.richpauloo.com/)
