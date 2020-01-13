@@ -7,6 +7,8 @@ gh-badge: [star, watch, fork, follow]
 
 ***  
 
+First and foremost, tremendous credit is due to [Sean Kross](https://github.com/seankross?tab=repositories) for the awesome [twilio](https://github.com/seankross/twilio) `R` package.
+
 I was running a pretty long geocoding job, and I ended up throwing a [`beepr::beep()`](https://www.r-project.org/nosvn/pandoc/beepr.html) into the console just so I would get a notification when the job completed.  
 
 But the beep alerts me over the computer, so I was tied to it...  darn.  
@@ -56,7 +58,3 @@ Now if start a fresh RStudio session, all you need to do is add `textme()` to th
 
 Since my job is STILL running, I'm going to go for a walk and breathe some fresh air -- but not before asking my computer to alert me once it's done working.  
 
-***  
-
-
-Many thanks to the makers of RStudio, Sean Kross for the awesome [{twilio}](https://github.com/seankross/twilio) package, and computers who do our bidding everywhere.   
